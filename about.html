@@ -6,6 +6,7 @@
     <title>About Me - Camren Khoury</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
+        /* General Styles */
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
@@ -41,6 +42,12 @@
             color: #333;
         }
 
+        h2 {
+            margin-top: 10px; /* Reduced top margin */
+            margin-bottom: 5px; /* Small gap below the heading */
+        }
+
+        /* About Info Section */
         section#about-info {
             max-width: 1200px;
             margin: 0 auto;
@@ -50,44 +57,85 @@
             border-radius: 8px;
         }
 
-        #about-info p {
-            font-size: 1.1em;
-            margin: 15px 0;
-        }
-
-        /* General image styling */
-        #about-info img {
-            max-width: 100%; /* Ensure images scale with the container */
-            height: auto; /* Maintain aspect ratio */
-            border-radius: 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        /* LinkedIn photo (top) right aligned */
-        .image-container-top {
+        /* Flexbox Layout for Sections */
+        .section-content {
             display: flex;
-            justify-content: flex-end;
-            margin-top: -50px;
+            flex-wrap: nowrap;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 10px;
         }
 
-        .image-container-top img {
-            max-width: 200px; /* Set appropriate max width */
+        .section-text {
+            flex: 1;
+            min-width: 300px;
+            margin: 5px 0; /*Reduced top and bottom margins */
+            padding: 0;
+        }
+
+        .section-text h2 {
+            margin: 10px 0; /* Keep headers tight */
+        }
+
+        /* Remove Bottom Margin from Paragraphs in Section Text */
+        .section-text p:last-child {
+            margin-bottom: 0; /* Prevent extra space below last paragraph */
+        }
+
+        /* Side Image Styling */
+        .section-image {
+            flex: 0 0 250px;
+            max-width: 250px;
+            margin-right: 20px;
+        }
+
+        .section-image img {
+            width: 100%;
             height: auto;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            border: 5px solid #e0e0e0;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
 
-        /* Bottom images container (stacked vertically) */
+        .section-image img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+            border-color: #a1c4fd;
+        }
+
+        .image-caption {
+            text-align: center;
+            font-style: italic;
+            margin-top: 10px;
+            color: #555;
+            font-size: 0.9em;
+        }
+
+        /* Bottom Image Container */
         .image-container-bottom {
             display: flex;
-            flex-direction: column; /* Stack images vertically */
+            flex-wrap: wrap;
+            gap: 20px;
+            float: right;
             justify-content: center;
-            align-items: center;
-            margin-top: 50px;
+            margin-top: 20px;
         }
 
         .image-container-bottom img {
-            max-width: 300px; /* Allow images to scale */
-            margin: 20px 0;
-            height: auto; /* Ensure aspect ratio is maintained */
+            max-width: 250px;
+            width: 100%;
+            border-radius: 15px;
+            float: right;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            border: 5px solid #e0e0e0;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .image-container-bottom img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+            border-color: #a1c4fd;
         }
 
         footer {
@@ -112,11 +160,10 @@
 
     <section id="about-info">
         <h1>About Me</h1>
-        <p>Hello! I’m <strong>Camren Khoury</strong>, a third-year student at <strong>Clemson University</strong> majoring in <strong>Computer Engineering</strong> and <strong>Electrical Engineering</strong>. I have a deep passion for technology and the ways in which engineering can transform the world around us. My academic journey so far has equipped me with a solid foundation in both hardware and software, and I am eager to continue applying these skills to real-world challenges.</p>
-
-        <!-- LinkedIn photo aligned to the right -->
-        <div class="image-container-top">
-            <img src="images/linkedInPhoto.jpg" alt="LinkedIn Photo">
+        <div class="section-content">
+            <div class="section-text">
+                <p>Hello! I’m <strong>Camren Khoury</strong>, a third-year student at <strong>Clemson University</strong> majoring in <strong>Computer Engineering</strong> and <strong>Electrical Engineering</strong>. I have a deep passion for technology and the ways in which engineering can transform the world around us. My academic journey so far has equipped me with a solid foundation in both hardware and software, and I am eager to continue applying these skills to real-world challenges.</p>
+            </div>
         </div>
 
         <h2>Academic Journey</h2>
@@ -141,21 +188,19 @@
 
         <h2>Why This Field?</h2>
         <p>The intersection of <strong>hardware</strong> and <strong>software</strong> has always fascinated me. Whether it’s through embedded systems, microcontrollers, or the complex algorithms behind various technologies, I love solving problems by combining both worlds. This passion for finding innovative solutions drives my academic and career ambitions.</p>
-
+        
+        <div class="image-container-bottom">
+            <div>
+                <img src="images/gymphotorandom.jpg" alt="Random Gym Photo">
+            </div>
+        </div>
+        
         <h2>Personal Interests</h2>
         <p>When I’m not immersed in engineering projects, you can find me on the <strong>basketball court</strong>, working on my physical health and improving my athletic performance, or <strong>swimming</strong> to maintain a healthy balance between my academic and personal life. Additionally, I enjoy <strong>problem-solving challenges</strong>, whether they are coding problems or logic puzzles.</p>
 
-        <!-- Bottom images for outside of work, stacked vertically -->
-        <div class="image-container-bottom">
-            <img src="images/swimboardslap.jpeg" alt="Swimboard Slap">
-            <img src="images/gymphotorandom.jpg" alt="Random Gym Photo">
-        </div>
 
         <p>If you’d like to learn more about my work, feel free to check out my <a href="portfolio.html">portfolio</a> or <a href="contact.html">contact me</a>.</p>
     </section>
 
-    <footer>
-        <p>&copy; 2024 Camren Khoury. All Rights Reserved.</p>
-    </footer>
 </body>
 </html>
