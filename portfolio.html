@@ -5,6 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Camren Khoury</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        h1, h2 {
+            font-weight: bold;
+            color: #333;
+        }
+
+        h2 {
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        /* Portfolio Info Section */
+        section#portfolio-info {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .portfolio-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .portfolio-git-logo {
+            width: 150px;
+            height: 150px;
+            margin-right: 15px;
+            align-items: right;
+            object-fit: contain;
+        }
+
+        .portfolio-item a {
+            color: #007acc;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .portfolio-item a:hover {
+            color: #005a99;
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #333;
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -19,10 +104,27 @@
     </header>
 
     <section id="portfolio-info">
-	    <p><strong>GitHub:</strong> <a href="https://github.com/camrenkhoury" target="_blank">GitHub Profile</a></p>
-		<p><strong>LeetCode:</strong> <a href="https://leetcode.com/u/camrenkhoury/" target="_blank">LeetCode Profile</a></p>
-		<p><strong>YouTube:</strong> In Development</p>
+        <h1>Portfolio</h1>
+        <div class="portfolio-item">
+            <img src="images/gitlogo.png" alt="GitHub Logo" class="portfolio-git-logo">
+            <p>
+                <strong>GitHub:</strong> 
+                <a href="https://github.com/camrenkhoury" target="_blank">GitHub Profile</a>
+            </p>
+        </div>
+        <div class="portfolio-item">
+            <img src="images/leetlogo.png" alt="LeetCode Logo" class="portfolio-git-logo">
+            <p>
+                <strong>Leetcode:</strong> 
+                <a href="https://leetcode.com/u/camrenkhoury/" target="_blank">Leetcode Profile</a>
+            </p>
+        </div>
+        <div class="portfolio-item">
+            <img src="images/youtubelogo.png" alt="Youtube Logo" class="portfolio-git-logo">
+            <p>
+                <strong>Youtube:</strong><p>In Development</p>
+            </p>
+        </div>
     </section>
-
 </body>
 </html>
