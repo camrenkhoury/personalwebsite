@@ -3,197 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Camren Khoury</title>
+    <title>About – Camren Khoury</title>
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        /* General Styles */
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        header {
-            background: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-        }
-
-        h1, h2 {
-            font-weight: bold;
-            color: #333;
-        }
-
-        h2 {
-            margin-top: 10px; /* Reduced top margin */
-            margin-bottom: 5px; /* Small gap below the heading */
-        }
-
-        /* About Info Section */
-        section#about-info {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-
-        /* Flexbox Layout for Sections */
-        .section-content {
-            display: flex;
-            flex-wrap: nowrap;
-            align-items: flex-start;
-            gap: 15px;
-            margin-bottom: 10px;
-        }
-
-        .section-text {
-            flex: 1;
-            min-width: 300px;
-            margin: 5px 0; /*Reduced top and bottom margins */
-            padding: 0;
-        }
-
-        .section-text h2 {
-            margin: 10px 0; /* Keep headers tight */
-        }
-
-        /* Remove Bottom Margin from Paragraphs in Section Text */
-        .section-text p:last-child {
-            margin-bottom: 0; /* Prevent extra space below last paragraph */
-        }
-
-        /* Side Image Styling */
-        .section-image {
-            flex: 0 0 250px;
-            max-width: 250px;
-            margin-right: 20px;
-        }
-
-        .section-image img {
-            width: 100%;
-            height: auto;
-            border-radius: 15px;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-            border: 5px solid #e0e0e0;
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-        }
-
-        .section-image img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
-            border-color: #a1c4fd;
-        }
-
-        .image-caption {
-            text-align: center;
-            font-style: italic;
-            margin-top: 10px;
-            color: #555;
-            font-size: 0.9em;
-        }
-
-        /* Bottom Image Container */
-        .image-container-bottom {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            float: right;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        .image-container-bottom img {
-            max-width: 250px;
-            width: 100%;
-            border-radius: 15px;
-            float: right;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-            border: 5px solid #e0e0e0;
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-        }
-
-        .image-container-bottom img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
-            border-color: #a1c4fd;
-        }
-
-        footer {
-            text-align: center;
-            padding: 15px;
-            background-color: #333;
-            color: white;
-        }
-    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
+
+    <!-- NAVIGATION -->
+    <header class="site-header">
+        <nav class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">CAMREN J KHOURY</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="about.html" class="active">About</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="about-info">
-        <h1>About Me</h1>
-        <div class="section-content">
-            <div class="section-text">
-                <p>Hello! I’m <strong>Camren Khoury</strong>, a third-year student at <strong>Clemson University</strong> majoring in <strong>Computer Engineering</strong> and <strong>Electrical Engineering</strong>. I have a deep passion for technology and how engineering can transform our world. My academic journey has provided me with a solid foundation in hardware and software, which I am eager to apply to real-world challenges.</p>
+    <!-- ================= ABOUT INFO ================= -->
+<section id="about-info">
+    <div class="about-flex">
+
+        <!-- LEFT: TEXT CONTENT -->
+        <div class="about-text">
+
+            <h1>About Me</h1>
+
+            <p>I’m <strong>Camren Khoury</strong>, a student at 
+                <strong>Clemson University</strong> majoring in 
+                <strong>Computer Engineering</strong> and 
+                <strong>Electrical Engineering</strong> graduating in May 2026.
+            </p>
+
+            <p>
+                I am from <strong>North Charleston, South Carolina</strong>.I always had a deep interest in how technology works at its core, especially the way binary
+                logic, circuits, and small changes in hardware or software can completely change a system's
+                behavior. Early projects like building my own computer and repairing electronics strengthened
+                my interest in engineering and pushed me toward a hands-on career.
+            </p>
+
+            <p>
+                My partner <strong>Cadle</strong>, who is studying Elementary Education at 
+                <strong>Augusta University</strong>, and our daughter <strong>Delilah</strong> inspire me to 
+                approach engineering with purpose, discipline, and long-term vision. Balancing academics, 
+                leadership roles, and fatherhood has shaped my resilience and the way I approach challenges.
+            </p>
+
+            <p>
+                I chose to get a degree in both Computer Engineering and Electrical Engineering because
+                I wanted a complete understanding of both hardware and software. Computer Engineering provides
+                the middle ground between electronics and computer science, but taking additional EE-exclusive
+                courses such as electromagnetics, electronics, and power systems allows me to understand how
+                the systems I design work from the physical level up through embedded software. This broader
+                perspective helps me design solutions that are more reliable and realistic.
+            </p>
+
+            <h2>Academic Journey</h2>
+            <p>
+                During my time at Clemson, I have grown my skills in several course areas including data 
+                structures, algorithms, electronics, and microcontroller systems. Highlights include:
+            </p>
+
+            <ul>
+                <li><strong>Data Structures and Algorithms</strong>: Building and debugging linked lists, heaps, and memory systems.</li>
+                <li><strong>Electronics and Circuit Design</strong>: Hands-on labs with transistors, oscilloscopes, and curve tracers.</li>
+                <li><strong>Analog Signal Processing and Op-Amps</strong>: Designing amplifiers, filters, and frequency-response circuits.</li>
+                <li><strong>Embedded Systems</strong>: PIC32-based projects including a Nuclear Meltdown Simulation.</li>
+            </ul>
+
+            <p>
+                I am proficient in <strong>C</strong> and <strong>Python</strong>, with experience in 
+                <strong>Swift</strong> and development on <strong>PIC32</strong>, <strong>ESP32</strong>, and 
+                <strong>STM32</strong> platforms.
+            </p>
+
+            <h2>Career Goals</h2>
+            <p>
+                I aim to contribute significantly to the field of <strong>embedded systems</strong> and 
+                <strong>microcontroller-based solutions</s trong>, focusing on seamless hardware/software integration.
+            </p>
+
+            <p>My areas of interest include:</p>
+            <ul>
+                <li><strong>Embedded Systems Development</strong>: Healthcare, automation, and consumer electronics.</li>
+                <li><strong>System Optimization</strong>: Improving device efficiency and design.</li>
+                <li><strong>Network Engineering</strong>: Implementing and expanding digital infrastructure.</li>
+                <li><strong>Software Development</strong>: Robust systems built with C-based languages.</li>
+            </ul>
+
+            <h2>Personal Interests</h2>
+            <p>
+                Outside engineering, I enjoy the <strong>gym</strong>, <strong>swimming</strong>,
+                <strong>basketball</strong>, and spending time with my family.
+            </p>
+
+            <p>
+                If you’d like to learn more, visit my 
+                <a href="portfolio.html">portfolio</a> or 
+                <a href="contact.html">contact me</a>.
+            </p>
+
+        </div> <!-- end about-text -->
+
+        <!-- RIGHT: COMBINED PHOTO CARD -->
+        <div class="about-photo-group">
+
+            <div class="side-photo">
+                <img src="images/PersonalPhoto.jpg" alt="Camren">
+                <p class="photo-caption">Camren John Khoury</p>
             </div>
-        </div>
 
-        <h2>Academic Journey</h2>
-        <p>During my time at Clemson, I have grown my skills in several course areas including data structures, algorithms, electronics, and microcontroller systems. Highlights of my most recent school projects include:</p>
-        <ul>
-            <li><strong>Data Structures and Algorithms</strong>: Developing systems to manage and optimize data, including the design and debugging of memory heap management systems and linked lists.</li>
-            <li><strong>Electronics and Circuit Design</strong>: Participating in hands-on labs working with tranistors, designing circuits, and using tools like curve tracers and oscilloscopes to problem solve.</li>
-			<li><strong>Analog Signal Processing and Op-Amps</strong>: Using basic Op-Amps to control gain and work with larger electronic circuits like amplifiers, filters, and frequency response</li>
-            <li><strong>Embedded Systems</strong>: Working with the PIC32MX150F128B Microcontroller to create various lab projects, including a Nuclear Meltdown Simulation.</li>
-        </ul>
+            <div class="side-photo">
+                <img src="images/cadleanddeli.jpg" alt="Cadle & Delilah">
+                <p class="photo-caption">Cadle and Delilah</p>
+            </div>
 
-        <p>I am planning on continue my learning of the C language, as well as any adjacent or industry-relevant languages. I am currently proficient in <strong>C</strong> and <strong>Python</strong>, and have experience with <strong>Apple Swift</strong>. The microcontrollers I have experience with are the <strong>PIC32</strong>, <strong>ESP32</strong>, and <strong>STM32</strong> </p>
+        </div> <!-- end photo group -->
 
-        <h2>Career Goals</h2>
-        <p>Looking ahead, I aim to contribute significantly to the field of <strong>embedded systems</strong> and <strong>microcontroller-based solutions</strong>. I am particularly interested in designing systems that ensure seamless interactions between software and hardware. My ambition is to design intelligent systems that address real-world problems.</p>
+    </div> <!-- end about-flex -->
+</section>
 
-        <p>I aim to pursue opportunities that involve:</p>
-        <ul>
-            <li><strong>Embedded Systems Development</strong>: Developing microcontroller-based solutions for industries such as healthcare, automation, and consumer electronics.</li>
-            <li><strong>System Design and Optimization</strong>: Assisting companies in designing efficient and innovative systems that enhance the performance of everyday devices.</li>
-            <li><strong>Network Engineering</strong>: Engaging in network engineering projects, including setting up company servers, implementing new protocols, or expanding infrastructure across the United States.</li>
-            <li><strong>Software Development</strong>: Designing robust back-end software using languages similar to C and Python.</li>
-        </ul>
-        
-        
-        <h2>Personal Interests</h2>
-        <p>When I’m not engaged in engineering projects, you can find me on the <strong>basketball court</strong>, working out in the <strong>gym</strong>, or <strong>swimming</strong> to maintain a balanced lifestyle. I also enjoy spending time with my family </p>
-
-        <p>If you’d like to learn more about my work, feel free to check out my <a href="portfolio.html">portfolio</a> or <a href="contact.html">contact me</a>.</p>
-    </section>
+    <footer class="site-footer">
+        <p>© 2025 Camren Khoury</p>
+    </footer>
 
 </body>
 </html>

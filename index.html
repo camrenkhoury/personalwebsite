@@ -3,26 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Camren Khoury's Website</title>
+    <title>Camren Khoury</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Home Page Exclusive Styling */
+
+        body {
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        .landing-container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            background: linear-gradient(135deg, #0a0a0c, #0f1115 40%, #0a0d2d);
+            color: white;
+            position: relative;
+        }
+
+        /* Floating lights effect */
+        .floating-bg {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(50,130,255,0.25), transparent 70%);
+            border-radius: 50%;
+            animation: float 14s infinite ease-in-out;
+            filter: blur(60px);
+        }
+
+        .floating-bg:nth-child(1) {
+            top: 10%;
+            left: 15%;
+            animation-delay: 0s;
+        }
+
+        .floating-bg:nth-child(2) {
+            bottom: 15%;
+            right: 10%;
+            animation-delay: 4s;
+            background: radial-gradient(circle, rgba(120,180,255,0.3), transparent 70%);
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px) translateX(0px); }
+            50% { transform: translateY(-40px) translateX(20px); }
+            100% { transform: translateY(0px) translateX(0px); }
+        }
+
+        .landing-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+
+        .landing-subtitle {
+            margin-top: 10px;
+            font-size: 1.2rem;
+            opacity: 0;
+            animation: fadeIn 2.5s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .enter-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 14px 34px;
+            font-size: 1.1rem;
+            border-radius: 8px;
+            text-decoration: none;
+            background: var(--accent);
+            color: white;
+            font-weight: 600;
+            transition: 0.3s;
+            opacity: 0;
+            animation: fadeIn 3s forwards;
+        }
+
+        .enter-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 12px rgba(50,130,255,0.6);
+            background: #2d8cff;
+        }
+
+        /* Optional subtle pulsing underline */
+        .landing-title span {
+            border-bottom: 3px solid var(--accent);
+            padding-bottom: 3px;
+        }
+
+    </style>
 </head>
+
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section id="intro">
-        <h1>Welcome to My Personal Website</h1>
-        <p>Hi, I'm Camren Khoury. You will see this website grow as my skills grow.</p>
-    </section>
+    <!-- Floating light decor -->
+    <div class="floating-bg"></div>
+    <div class="floating-bg"></div>
 
+    <!-- MAIN LANDING CONTENT -->
+    <div class="landing-container">
+        <h1 class="landing-title">
+            <span>Camren Khoury</span>
+        </h1>
+
+        <p class="landing-subtitle">
+            Electrical & Computer Engineer — Embedded Systems, Controls, and Applied Computing
+        </p>
+
+        <a href="about.html" class="enter-btn">Enter Site</a>
+    </div>
 
 </body>
 </html>

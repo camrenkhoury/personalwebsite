@@ -3,128 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Camren Khoury</title>
+    <title>Portfolio – Camren Khoury</title>
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        /* General Styles */
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        header {
-            background: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-        }
-
-        h1, h2 {
-            font-weight: bold;
-            color: #333;
-        }
-
-        h2 {
-            margin-top: 10px;
-            margin-bottom: 5px;
-        }
-
-        /* Portfolio Info Section */
-        section#portfolio-info {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-
-        .portfolio-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-
-        .portfolio-git-logo {
-            width: 150px;
-            height: 150px;
-            margin-right: 15px;
-            align-items: right;
-            object-fit: contain;
-        }
-
-        .portfolio-item a {
-            color: #007acc;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-
-        .portfolio-item a:hover {
-            color: #005a99;
-            text-decoration: underline;
-        }
-
-        footer {
-            text-align: center;
-            padding: 15px;
-            background-color: #333;
-            color: white;
-        }
-    </style>
 </head>
+
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
+
+    <!-- ================= HEADER ================= -->
+    <header class="site-header">
+        <nav class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">CAMREN J KHOURY</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html" class="active">Portfolio</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="portfolio-info">
-        <h1>Portfolio</h1>
-        <div class="portfolio-item">
-            <img src="images/gitlogo.png" alt="GitHub Logo" class="portfolio-git-logo">
-            <p>
-                <strong>GitHub:</strong> 
-                <a href="https://github.com/camrenkhoury" target="_blank">GitHub Profile</a>
-            </p>
-        </div>
-        <div class="portfolio-item">
-            <img src="images/leetlogo.png" alt="LeetCode Logo" class="portfolio-git-logo">
-            <p>
-                <strong>Leetcode:</strong> 
-                <a href="https://leetcode.com/u/camrenkhoury/" target="_blank">Leetcode Profile</a>
-            </p>
-        </div>
-        <div class="portfolio-item">
-            <img src="images/youtubelogo.png" alt="Youtube Logo" class="portfolio-git-logo">
-            <p>
-                <strong>Youtube:</strong><p>In Development</p>
-            </p>
+    <!-- ================= HERO ================= -->
+    <section class="hero hero-about">
+        <div class="hero-content">
+            <h1>Portfolio</h1>
+            <p>A collection of engineering projects, systems, and technical documentation.</p>
         </div>
     </section>
+
+    <!-- ================= PROFILES (GitHub, LC, YouTube) ================= -->
+    <section class="section-wrapper">
+        <h2 class="section-title">Profiles</h2>
+
+        <div class="card-grid">
+
+            <div class="info-card">
+                <img src="images/gitlogo.png" class="profile-logo" alt="GitHub Logo">
+                <h3>GitHub</h3>
+                <p>All public repositories, embedded systems code, FPGA designs, and more.</p>
+                <a href="https://github.com/camrenkhoury" target="_blank" class="card-button">View Profile</a>
+            </div>
+
+            <div class="info-card">
+                <img src="images/leetlogo.png" class="profile-logo" alt="LeetCode Logo">
+                <h3>LeetCode</h3>
+                <p>Algorithm practice, data structures, and competitive problem-solving.</p>
+                <a href="https://leetcode.com/u/camrenkhoury/" target="_blank" class="card-button">View Profile</a>
+            </div>
+
+            <div class="info-card">
+                <img src="images/youtubelogo.png" class="profile-logo" alt="YouTube Logo">
+                <h3>YouTube</h3>
+                <p>In development: engineering builds, tutorials, and project breakdowns.</p>
+                <a href="#" class="card-button disabled">Coming Soon</a>
+            </div>
+
+        </div>
+    </section>
+
+<!-- ================= PROJECTS SECTION ================= -->
+<section class="section-wrapper">
+    <h2 class="section-title">Featured Projects</h2>
+
+    <div class="projects-grid">
+
+        <div class="project-card">
+            <img src="images/shark_padded.png" class="project-img" alt="PoolShark Project">
+            <h3>Automated PoolShark Vision & Motor Control System</h3>
+            <a href="project-pages/poolshark.html" class="card-button">View Documentation</a>
+        </div>
+
+        <div class="project-card">
+            <img src="images/esp32.png" class="project-img" alt="ESP32 WROOM">
+            <h3>Microcontroller-Based Water Quality Sensor System</h3>
+            <a href="project-pages/water-quality-sensor.html" class="card-button">View Documentation</a>
+        </div>
+
+        <div class="project-card">
+            <img src="images/pynq-z2.png" class="project-img" alt="Pynq-Z2 board">
+            <h3>FPGA Processor & Digital Systems</h3>
+            <a href="project-pages/fpga-digital-systems.html" class="card-button">View Documentation</a>
+        </div>
+
+        <div class="project-card">
+            <img src="images/picluster4.png" class="project-img" alt="Pi Cluster">
+            <h3>High Performance Computing</h3>
+            <a href="project-pages/hpc-computing.html" class="card-button">View Documentation</a>
+        </div>
+
+        <div class="project-card">
+            <img src="images/structures.png" class="project-img" alt="Data Structure Image">
+            <h3>Data Structures and Algorithms</h3>
+            <a href="project-pages/data-structures.html" class="card-button">View Documentation</a>
+        </div>
+
+    </div>
+</section>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
+        <p>© 2025 Camren Khoury</p>
+    </footer>
+
 </body>
 </html>
