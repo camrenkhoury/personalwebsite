@@ -498,59 +498,74 @@ body {
    DESC SECTION (TEXT + IMAGE)
 ============================= */
 
-/* DESC SECTION — clean floating layout with NO background cards */
+/* ============================
+   DESCRIPTION SECTIONS (TEXT + IMAGE)
+============================ */
+
 .desc-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 25px;
-    margin-bottom: 35px;
-    background: none;
+    margin-bottom: 45px;
     padding: 0;
+    background: none;
     border: none;
 }
 
+/* Text left, image right */
 .desc-left {
-    flex-direction: row;  
-    align-items: center;   /* vertically center image with text */   /* text left, image right */
+    flex-direction: row;
 }
 
+/* Text right, image left */
 .desc-right {
-    flex-direction: row-reverse;  /* text right, image left */
-    align-items: center;   /* vertically center image with text */
+    flex-direction: row-reverse;
 }
 
 .desc-text {
     flex: 1;
+    font-size: 1.05rem;
+    line-height: 1.55;
+    color: var(--text-light);
+    opacity: 0.92;
 }
 
-/* IMAGE — NO background, NO border, NO card box */
+/* IMAGE BLOCK */
 .desc-img {
     width: 300px;
-    padding: 0;              /* remove padding */
-    background: none;        /* remove gray */
-    border: none;            /* remove border */
-    box-shadow: none;        /* remove shadow */
-    backdrop-filter: none;   /* remove blur */
     text-align: center;
 }
 
-/* Image styling */
+/* Image style */
 .desc-img img {
     width: 100%;
     max-width: 260px;
     height: auto;
     object-fit: cover;
-    border-radius: 30%; /* keep rounded corners */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.35); /* optional soft shadow */
+    border-radius: 30%; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.35);
 }
 
-/* Caption centered and simple */
+/* Caption */
 .photo-caption {
     margin-top: 8px;
     font-size: 0.9rem;
     opacity: 0.85;
     text-align: center;
+}
+
+
+/* Responsive: stack on mobile */
+@media (max-width: 800px) {
+    .desc-section {
+        flex-direction: column !important;
+        text-align: center;
+    }
+
+    .desc-img {
+        margin-top: 15px;
+    }
 }
 
 
