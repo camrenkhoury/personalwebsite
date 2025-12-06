@@ -490,3 +490,67 @@ body {
         align-items: center;
     }
 }
+
+/* ============================
+   DESCRIPTION SECTION LAYOUT
+============================ */
+/* =============================
+   DESC SECTION (TEXT + IMAGE)
+============================= */
+
+/* DESC SECTION — clean floating layout with NO background cards */
+.desc-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 35px;
+    background: none;
+    padding: 0;
+    border: none;
+}
+
+.desc-left {
+    flex-direction: row;  
+    align-items: center;   /* vertically center image with text */   /* text left, image right */
+}
+
+.desc-right {
+    flex-direction: row-reverse;  /* text right, image left */
+    align-items: center;   /* vertically center image with text */
+}
+
+.desc-text {
+    flex: 1;
+}
+
+/* IMAGE — NO background, NO border, NO card box */
+.desc-img {
+    width: 300px;
+    padding: 0;              /* remove padding */
+    background: none;        /* remove gray */
+    border: none;            /* remove border */
+    box-shadow: none;        /* remove shadow */
+    backdrop-filter: none;   /* remove blur */
+    text-align: center;
+}
+
+/* Image styling */
+.desc-img img {
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 30%; /* keep rounded corners */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.35); /* optional soft shadow */
+}
+
+/* Caption centered and simple */
+.photo-caption {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    opacity: 0.85;
+    text-align: center;
+}
+
+
