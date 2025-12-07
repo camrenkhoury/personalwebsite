@@ -566,7 +566,7 @@ body {
    PROJECT PAGE BANNER IMAGE
    ============================================================ */
 .project-banner {
-    width: 100%;
+    width: 55%;
     display: flex;
     justify-content: center;
     margin: 0 auto 35px auto;
