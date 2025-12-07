@@ -1,5 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<style>
+/* Make section titles use Clemson orange */
+.section-title {
+    color: #F56600 !important;
+}
+
+/* Make nav active link orange */
+.nav-links .active {
+    color: #F56600 !important;
+}
+
+/* Optional: Orange underline hover on links inside this page */
+a:hover {
+    color: #F56600;
+}
+</style>
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,139 +38,240 @@
         </ul>
     </nav>
 </header>
+    <div class="project-banner">
+        <img src="../images/clemsonpool.png" alt="CLEMSON POOL HEADER">
+    </div>
 
-<section class="section-wrapper">
+<section class="section-wrapper project-page">
 
+    
+    
     <h1 class="section-title">PoolShark – Automated Pool Vision & Control System</h1>
-    <p>—</p>
+
+    <p>
+        The PoolShark project was completed by Team 16 of ECE 4950 (Integrated Design I) in Fall 2025 at Clemson University. 
+        I worked on this team alongside 
+        <strong><a href="https://www.linkedin.com/in/john-walker-bolding/" target="_blank">John Walker Bolding</a></strong>, 
+        <strong><a href="https://www.linkedin.com/in/david-bootle/" target="_blank">David Bootle</a></strong>, 
+        <strong><a href="https://www.linkedin.com/in/william-mcglone-98617b265/" target="_blank">William McGlone</a></strong>, 
+        and 
+        <strong><a href="https://www.linkedin.com/in/blake-morgan-001b182a2/" target="_blank">Blake Morgan</a></strong>. 
+        Our team was tasked with designing an automated mini–billiards system capable of detecting ball positions and striking a ball from one end of the table into a selected pocket on the opposite side.
+    </p>
+
+    <p>
+        The final design integrates key engineering fields including <strong>Linear Control Systems</strong>, <strong>Computer Vision</strong>, and <strong>Mechanical Design</strong> to achieve a fully automated aiming and firing sequence.
+    </p>
+	
+	<h3 class="section-title">Components & Software Used</h3>
+
+	<p><strong>Software:</strong><br>
+	MATLAB scripts, Simulink models for DC motor / servo / solenoid control, and a custom interface built in App Designer.</p>
+
+	<p><strong>Electronics:</strong><br>
+	Arduino Mega 2560, DC motor and driver, servo motor for pointer rotation, and a solenoid for firing.</p>
+
+	<p><strong>Mechanical:</strong><br>
+	Gantry and belt-drive system with custom 3D-printed mounts for the camera, solenoid, and pointer arm.</p>
+
+	<p><strong>Sensing & Vision:</strong><br>
+	Logitech Brio 100 webcam providing top-down imagery for computer-vision processing.</p>
+
+	<p><strong>Test Environment:</strong><br>
+	Mini billiards table and ball set used for all calibration and shot-testing.</p>
+
+	<hr class="white-divider">
+
 
     <!-- =============================
-         Vision System
+         SECTION 1 — LCS & CIRCUIT DESIGN
     ============================== -->
-    <h2 class="section-title">Vision System Overview</h2>
-    <div class="desc-section desc-left">
-        <div class="desc-text"><p>—</p></div>
+    <h2 class="section-title">Linear Control Systems & Circuit Design</h2>
 
-        <!--
-        <div class="desc-img">
-            <img src="../images/pool_placeholder1.jpg" alt="Vision">
-            <p class="photo-caption">Vision System</p>
+    <!-- Motor Control -->
+    <h3 class="section-title">Simulink Motor Control</h3>
+    <div class="project-desc-section project-desc-left">
+        <div class="project-desc-text">
+            <p>This project utilized Linear Control Systems to safely operate and execute the motor movements involved with the system. The main utilization of this was in the DC Motor Model. The DC Motor Model was 
+                controlled with a closed-feedback loop that used a PID tuning and a sum block to subtract the expected motor position from the detected motor position. The DC Motor had a hall sensor built into it, 
+                this was responsible for returning the detected position to the Simulink for further feedback loop continuation until the motor approximated to final position. 
+            </p>
+            <br></br>
+            <p>This project also utlized Simulink for the digital writes to the servo motor and solenoid. The servo motor was pushed a PWM signals to rotate 
+                the pointer to the desired aim angle. The solenoid control block issued a simple digital high/low command to trigger the shot mechanism.</p>
+			<br></br>
+			<p>The combination of these two control elements formed the full Simulink pipeline for the PoolShark project. The DC motor positioned the cue along the gantry X-axis, then the servo adjusted to its commanded position, and after a brief delay the solenoid fired.
+			This sequencing ensured a predictable, repeatable, and safe motion, allowing the system to translate X position in millimeters and desired angle into physical actions</p>
+			
+			<p><strong>Primary Contributers:</strong> <strong><a href="https://www.linkedin.com/in/camren-khoury-404655226/" target="_blank">Camren Khoury</a></strong>, <strong><a href="https://www.linkedin.com/in/john-walker-bolding/" target="_blank">John Walker Bolding</a></strong></p>
+		</div>
+
+		<div class="project-desc-img-group">
+			<div class="project-desc-img">
+				<img src="../images/dcmotorcontrolblock.png" alt="DC Motor Control Block">
+				<p class="photo-caption">DC Motor Control Block</p>
+			</div>
+			<div class="project-desc-img">
+				<img src="../images/PoolSharkMotorModel.png" alt="Connected Simulink Block">
+				<p class="photo-caption">DC Motor, Servo, and Solenoid Subsystems</p>
+			</div>
+		</div>
+	</div>
+
+    <!-- Circuit Design -->
+    <h3 class="section-title">Circuit Design</h3>
+    <div class="project-desc-section project-desc-right">
+        <div class="project-desc-text">
+            <p>Work in Progress!</p>
+			
+			<p><strong>Primary Contributer:</strong> <strong><a href="https://www.linkedin.com/in/blake-morgan-001b182a2/" target="_blank">Blake Morgan</a></strong><p>
         </div>
-        -->
+            <div class="project-desc-img">
+            <img src="../images/PoolSharkCircuitDiagram.png" alt="Pool Shark Circuit Diagram">
+            <p class="photo-caption">Pool Shark Circuit Diagram</p>
+        </div>
     </div>
 
+	<hr class="white-divider">
+	
     <!-- =============================
-         Homography
+         SECTION 2 — VISION SYSTEM
     ============================== -->
-    <h2 class="section-title">Homography Calibration</h2>
-    <div class="desc-section desc-right">
-        <div class="desc-text"><p>—</p></div>
+    <h2 class="section-title">Vision System</h2>
 
-        <!--
-        <div class="desc-img">
-            <img src="../images/pool_placeholder2.jpg" alt="Homography">
-            <p class="photo-caption">Calibration</p>
-        </div>
-        -->
+    <!-- Vision Overview -->
+    <h3 class="section-title">Vision System Overview</h3>
+    <div class="project-desc-section project-desc-left">
+        <div class="project-desc-text"><p>Work in Progress!</p></div>
     </div>
 
-    <!-- =============================
-         Image & Color Detection
-    ============================== -->
-    <h2 class="section-title">Image & Color Detection</h2>
-    <div class="desc-section desc-left">
-        <div class="desc-text"><p>—</p></div>
+    <!-- Homography -->
+    <h3 class="section-title">Homography Calibration</h3>
 
-        <!--
-        <div class="desc-img">
-            <img src="../images/pool_placeholder3.jpg" alt="Detection">
-            <p class="photo-caption">Ball Detection</p>
+    <div class="project-desc-section project-desc-left">
+
+        <div class="project-desc-text">
+            <p>Work in Progress!</p>
+			
+			<p><strong>Primary Contributers:</strong> <strong><a href="https://www.linkedin.com/in/william-mcglone-98617b265/" target="_blank">William McGlone</a></strong>, <strong><a href="https://www.linkedin.com/in/camren-khoury-404655226/" target="_blank">Camren Khoury</a></strong></p>
         </div>
-        -->
+
+        <div class="project-desc-img-group">
+            <div class="project-desc-img">
+                <img src="../images/prehomography.jpg">
+                <p class="photo-caption">Pre Homography Example</p>
+            </div>
+
+            <div class="project-desc-img">
+                <img src="../images/posthomography.png">
+                <p class="photo-caption">Post Homography Example</p>
+            </div>
+        </div>
+
     </div>
 
-    <!-- =============================
-         Shot Geometry
-    ============================== -->
-    <h2 class="section-title">Shot Geometry</h2>
-    <div class="desc-section desc-right">
-        <div class="desc-text"><p>—</p></div>
+    <!-- Image & Color Detection -->
+    <h3 class="section-title">Image & Color Detection</h3>
 
-        <!--
-        <div class="desc-img">
-            <img src="../images/pool_placeholder4.jpg" alt="Shot Geometry">
-            <p class="photo-caption">Geometry Processing</p>
+    <div class="project-desc-section project-desc-left">
+
+        <div class="project-desc-img-group">
+            <div class="project-desc-img">
+                <img src="../images/pool_detection.png" alt="Detection">
+                <p class="photo-caption">Eight Ball Color Detection (Blue Disabled)</p>
+            </div>
+
+            <div class="project-desc-img">
+                <img src="../images/greenmorphologyexample.png" alt="Green Ball Morphology">
+                <p class="photo-caption">Morphology Example (Green)</p>
+            </div>
         </div>
-        -->
+
+        <div class="project-desc-text">
+            <p>Work in Progress!</p>
+            <p>Work in Progress!</p>
+			<p><strong>Primary Contributer:</strong> <strong><a href="https://www.linkedin.com/in/camren-khoury-404655226/" target="_blank">Camren Khoury</a></strong><p>
+        </div>
+		
+
     </div>
 
+	<hr class="white-divider">
+
     <!-- =============================
-         User Interface
+         SECTION 3 — USER INTERFACE
     ============================== -->
     <h2 class="section-title">User Interface</h2>
-    <div class="desc-section desc-left">
-        <div class="desc-text"><p>—</p></div>
+    <div class="project-desc-section project-desc-left">
 
-        <!--
-        <div class="desc-img">
-            <img src="../images/pool_placeholder_ui.jpg" alt="UI">
-            <p class="photo-caption">GUI</p>
+        <div class="project-desc-text">
+            <p>Work in Progress!</p>
+			<p><strong>Primary Contributer:</strong><strong> <a href="https://www.linkedin.com/in/camren-khoury-404655226/" target="_blank">Camren Khoury</a></strong></p>
         </div>
-        -->
+
+        <div class="project-desc-img-group">
+            <div class="project-desc-img">
+                <img src="../images/PoolSharkEntrancePage.png">
+                <p class="photo-caption"> Pool Shark Entrance Page</p>
+            </div>
+
+            <div class="project-desc-img">
+                <img src="../images/PoolSharkControlPage.png">
+                <p class="photo-caption">Pool Shark Control Page</p>
+            </div>
+        </div>
+
     </div>
 
-    <!-- =============================
-         Circuit Design
-    ============================== -->
-    <h2 class="section-title">Circuit Design</h2>
-    <div class="desc-section desc-right">
-        <div class="desc-text"><p>—</p></div>
+	<hr class="white-divider">
 
-        <!--
-        <div class="desc-img">
-            <img src="../images/pool_placeholder_circuit.jpg" alt="Circuit">
-            <p class="photo-caption">Circuit System</p>
+    <!-- =============================
+         SECTION 4 — MECHANICAL DESIGN and Calculations
+    ============================== -->
+    <h2 class="section-title">Mechanical Design & Geometry</h2>
+
+    <!-- Mechanical Design -->
+    <h3 class="section-title">Mechanical Design</h3>
+    <div class="project-desc-section project-desc-right">
+        <div class="project-desc-text">
+            <p>Work in Progress!</p>
+			<p><strong>Primary Contributers:</strong> <strong><a href="https://www.linkedin.com/in/david-bootle/" target="_blank">David Bootle</a></strong>, <strong><a href="https://www.linkedin.com/in/william-mcglone-98617b265/" target="_blank">William McGlone</a></strong>, <strong><a href="https://www.linkedin.com/in/john-walker-bolding/" target="_blank">John Walker Bolding</a></strong></strong></p>
         </div>
-        -->
+        <div class="project-desc-img-group">
+            <div class="project-desc-img">
+                <img src="../images/gantry_cad.png">
+                <p class="photo-caption">Gantry CAD</p>
+            </div>
+
+            <div class="project-desc-img">
+                <img src="../images/beltwithsolenoid.jpg">
+                <p class="photo-caption">Belt and with Solenoid Attached</p>
+            </div>
+        </div>
     </div>
 
-    <!-- =============================
-         Mechanical Design
-    ============================== -->
-    <h2 class="section-title">Mechanical Design</h2>
-    <div class="desc-section desc-left">
-        <div class="desc-text"><p>—</p></div>
-
-        <!--
-        <div class="desc-img">
-            <img src="../images/pool_placeholder_mech.jpg" alt="Mechanical">
-            <p class="photo-caption">Gantry System</p>
+    
+    <!-- Shot Geometry -->
+    <h3 class="section-title">Shot Geometry</h3>
+    <div class="project-desc-section project-desc-left">
+        <div class="project-desc-text">
+            <p>Work in Progress!</p>
+			<p><strong>Primary Contributer:</strong> <strong><a href="https://www.linkedin.com/in/john-walker-bolding/" target="_blank">John Walker Bolding</a></strong></p>
         </div>
-        -->
+        <div class="project-desc-img">
+            <img src="../images/geometrysketch.png">
+            <p class="photo-caption">Shot Geometry Sketch</p>
+        </div>
     </div>
 
-    <!-- =============================
-         Control System
-    ============================== -->
-    <h2 class="section-title">Simulink Motor Control</h2>
-    <div class="desc-section desc-right">
-        <div class="desc-text"><p>—</p></div>
-
-        <!--
-        <div class="desc-img">
-            <img src="../images/pool_placeholder6.jpg" alt="Control">
-            <p class="photo-caption">Control System</p>
-        </div>
-        -->
-    </div>
-
-    <!-- =============================
-         Final Pipeline Summary
-    ============================== -->
+	<hr class="white-divider">
+	
+    <!-- Final Pipeline -->
     <h2 class="section-title">Full Automation Pipeline</h2>
-    <p>—</p>
+    <p>Insert Photo With Full Pipeline From User input -> Solenoid Firing -> Returning</p>
 
 </section>
+
 
 <footer class="site-footer">
     <p>© 2025 Camren Khoury</p>

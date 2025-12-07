@@ -490,14 +490,6 @@ body {
         align-items: center;
     }
 }
-
-/* ============================
-   DESCRIPTION SECTION LAYOUT
-============================ */
-/* =============================
-   DESC SECTION (TEXT + IMAGE)
-============================= */
-
 /* ============================
    DESCRIPTION SECTIONS (TEXT + IMAGE)
 ============================ */
@@ -556,6 +548,7 @@ body {
 }
 
 
+
 /* Responsive: stack on mobile */
 @media (max-width: 800px) {
     .desc-section {
@@ -569,3 +562,166 @@ body {
 }
 
 
+/* ============================================================
+   PROJECT PAGE BANNER IMAGE
+   ============================================================ */
+.project-banner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 35px auto;
+}
+
+.project-banner img {
+    width: 75%;
+    max-width: 900px;
+    height: auto;
+    display: block;
+    border-radius: var(--radius);
+    object-fit: cover;
+}
+
+.project-banner-caption {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1rem;
+    opacity: 0.85;
+}
+
+
+
+/* ============================================================
+   PROJECT PAGE TYPOGRAPHY (ISOLATED)
+   ============================================================ */
+
+.project-page h1 {
+    font-size: 2.6rem;
+    font-weight: 800;
+    margin-bottom: 25px;
+    color: #F56600; /* Clemson Orange */
+}
+
+.project-page h2 {
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin-top: 50px;
+    margin-bottom: 15px;
+    color: #F56600;
+}
+
+.project-page h3 {
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin-top: 28px;
+    margin-bottom: 8px;
+    color: #F56600;
+}
+
+.project-page p {
+    font-size: 1.05rem;
+    opacity: 0.92;
+    line-height: 1.55;
+    margin-bottom: 14px;
+}
+
+
+
+/* ============================================================
+   PROJECT PAGE — DESCRIPTION SECTIONS (TEXT + IMAGE)
+   ============================================================ */
+
+.project-desc-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 45px;
+    padding: 0;
+    background: none;
+    border: none;
+}
+
+/* Layout orientation */
+.project-desc-left {
+    flex-direction: row;
+}
+
+.project-desc-right {
+    flex-direction: row-reverse;
+}
+
+/* Text block */
+.project-desc-text {
+    flex: 1;
+    font-size: 1.05rem;
+    line-height: 1.55;
+    color: var(--text-light);
+    opacity: 0.92;
+}
+
+/* Base image behavior */
+.project-desc-img img {
+    width: 100%;
+    max-width: 500px;
+    min-width: 300px;   /* ← ADD THIS */
+    height: auto;
+    object-fit: cover;
+}
+
+/* Image group defaults to row unless two exist */
+.project-desc-img-group {
+    display: flex;
+    flex-direction: column;   /* Vertical stack by default */
+    gap: 18px;
+}
+
+/* If only ONE image, center it and don’t stack */
+.project-desc-img-group:has(> .project-desc-img:only-child) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Image styling overrides specific to projects */
+.project-desc-img img {
+    width: 100%;
+    max-width: 500px;
+    min-width: 300px;   /* ← ADD THIS */
+    height: auto;
+    object-fit: cover;
+
+    /* Project-specific: clean technical look */
+    border-radius: 0px !important;
+    box-shadow: none !important;
+}
+
+
+
+/* ============================================================
+   RESPONSIVE BEHAVIOR — STACK ON MOBILE
+   ============================================================ */
+@media (max-width: 800px) {
+    .project-desc-section {
+        flex-direction: column !important;
+        text-align: center;
+    }
+
+    .project-desc-img {
+        width: 100%;
+        max-width: 500px;
+        min-width: 300px;   /* ← ADD THIS */
+        margin-top: 15px;
+    }
+}
+
+.white-divider {
+    border: none;
+    border-top: 2px solid white; /* pure white line */
+    margin: 40px 0;              /* adjust spacing */
+    opacity: 1;                  /* keep it fully visible */
+}
+
+a, a:visited {
+    color: white !important;
+}
