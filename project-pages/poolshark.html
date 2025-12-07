@@ -169,11 +169,14 @@ a:hover {
          SECTION 2 — VISION SYSTEM
     ============================== -->
     <h2 class="section-title">Vision System</h2>
-
+    
     <!-- Vision Overview -->
     <h3 class="section-title">Vision System Overview</h3>
     <div class="project-desc-section project-desc-left">
-        <div class="project-desc-text"><p>Work in Progress!</p></div>
+        <div class="project-desc-text"><p>The vision system relies on a multiple coordinated computer-vision elements including homography correction,
+            HSV color masking, and object morphology and reconstruction. The combination of these elements takes a raw out-of-position webcam frame and converts it
+            into a top-down birds-eye repreentation of the table with specific billiard balls and their locations located.
+        </p></div>
     </div>
 
     <!-- Homography -->
@@ -182,8 +185,23 @@ a:hover {
     <div class="project-desc-section project-desc-left">
 
         <div class="project-desc-text">
-            <p>Work in Progress!</p>
+            <p>The homography transformation converts the angled webcam image into a proportionate bird's-eye view, top-down representation of the pool table 
+                The camera is mounted off to the side in the initial gantry design, which became a limitation when it came to computer vision, thus homography
+                was implemented to give a better view of the table and to account for perspective distortion. From the initial perspective objects that are located
+                further from the camera, appear smaller and have less pixels associated per mm in real life, and the table edges are skewed. The homography correct this by
+                mapping the four corners of the real table to a rectangular coordinate system during an early calibration step.
+            </p>
 			
+            <p>
+                The software defines a target rectangle whose dimensions match the actual table size and resolution desired for processing. The MATLAB code computes a projective transform matrix with <strong>fitgeotrans</strong>, which mathematically describes how every point
+                in the original image maps to the now uniform top-down view.
+            </p>
+                Once the frame is calculated, the frame is remapped using the MATLAB <strong>iwarp</strong> function. This step reconstructs a new image where straight lines 
+                remain straight and distances are consistent across the table. The resulting image becomes the new frame for calculations for color detection, morphology, and centroid 
+                placement allowing for accurate angle calculations and distance placement.
+            <p>
+
+            </p>
 			<p><strong>Primary Contributers:</strong> <strong><a href="https://www.linkedin.com/in/william-mcglone-98617b265/" target="_blank">William McGlone</a></strong>, <strong><a href="https://www.linkedin.com/in/camren-khoury-404655226/" target="_blank">Camren Khoury</a></strong></p>
         </div>
 
