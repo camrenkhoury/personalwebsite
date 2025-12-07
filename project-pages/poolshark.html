@@ -140,7 +140,20 @@ a:hover {
     <h3 class="section-title">Circuit Design</h3>
     <div class="project-desc-section project-desc-right">
         <div class="project-desc-text">
-            <p>Work in Progress!</p>
+            <p>The circuit diagram to the left shows how the DC motor, solenoid, and servo interface with the Arduino Mega 2560 microcontroller provided with the lab through 
+                dedicated power and switching components. Each subsystem uses different hardware requirements, and the circuit is broken into three functional blocks similar
+                to the associated Simulink model blocks above.
+            </p>
+
+            <p>
+                The DC motor subsystem uses a motor driver to safely interface the motor with the Arduino, due to differences in voltage and current requirements between the two. 
+                The DC motor is connected to a 12V DC Power supply since the microcontroller can not supply a voltage over 5V safely. The arduino provides PWM and directional signals to the motor driver,
+                allowing control of both motor speed and rotational direction. The servo subsystem uses a standard PWM control signal from the Arduino digital write to set its rotational angle. It receives its own
+                5V and ground lines and the interal electronics will interpret the PWM commands and self-adjust the position until the servo essentially fights to the desired position.
+                The solenoid subsystem requiers a N-channel MOSFET which acts as a high-current switch to power the solenoid on command. The Arduino is responsible for driving
+                the MOSFET gate through the 47 ohm resistor, which slightly removes overcurrent and reduces noise. The 10k ohm resistor is placed on the MOSFET gate to ensured the
+                solenoid remains off during start up or if the control pin is undecided and currently neither driving 1 or 0.
+            </p>
 			
 			<p><strong>Primary Contributer:</strong> <strong><a href="https://www.linkedin.com/in/blake-morgan-001b182a2/" target="_blank">Blake Morgan</a></strong><p>
         </div>
