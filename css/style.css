@@ -280,6 +280,70 @@ body {
     }
 }
 
+/* ============================================================
+   PROJECTS PAGE — TWO COLUMN LAYOUT (Projects + Profiles)
+   ============================================================ */
+
+.main-content-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    width: 100%;
+}
+
+.projects-column {
+    flex: 3;
+}
+
+.profile-sidebar {
+    flex: 0 0 220px;   /* fixed, slim sidebar width */
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+
+.profile-card {
+    background: var(--card-bg);
+    padding: 10px 14px;
+    border-radius: var(--radius);
+    border: 1px solid var(--card-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 58px; /* compact and uniform */
+}
+
+
+.profile-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+
+.profile-card .card-button {
+    padding: 6px 10px;
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+    .profile-sidebar {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: none;
+    }
+}
+
+
 /* ============================
    BUTTONS
 ============================ */
@@ -662,14 +726,6 @@ body {
     opacity: 0.92;
 }
 
-/* Base image behavior */
-.project-desc-img img {
-    width: 100%;
-    max-width: 500px;
-    min-width: 300px;   /* ← ADD THIS */
-    height: auto;
-    object-fit: cover;
-}
 
 /* Image group defaults to row unless two exist */
 .project-desc-img-group {
