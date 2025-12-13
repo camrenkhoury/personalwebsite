@@ -152,11 +152,20 @@ body {
     hyphens: auto;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
+
     #about-info {
         padding: 20px;
-        width: 92%;
-        margin: 40px auto;
+        margin: 20px;
+        width: auto;
+    }
+
+    .desc-text {
+        width: 100%;
+        max-width: 95%;
+        margin: 0 auto;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
     }
 }
 /* ============================
