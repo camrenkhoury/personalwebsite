@@ -251,6 +251,8 @@ body {
     width: 300px; /* PERFECT FOR CENTERED LAYOUT */
 }
 
+
+
 .project-card:hover {
     transform: translateY(-6px);
     border-color: var(--accent);
@@ -301,6 +303,7 @@ body {
 
 .card-button.disabled {
     cursor: not-allowed;
+    background: #555;
     opacity: 0.5;
     pointer-events: none;
 }
