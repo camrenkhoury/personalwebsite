@@ -146,6 +146,19 @@ body {
     color: #d3d3d3;
 }
 
+#about-info {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+@media (max-width: 600px) {
+    #about-info {
+        padding: 20px;
+        width: 92%;
+        margin: 40px auto;
+    }
+}
 /* ============================
    CARD GRID (Profiles Section)
 ============================ */
