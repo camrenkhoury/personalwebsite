@@ -115,13 +115,13 @@ a:hover {
                 this was responsible for returning the detected position to the Simulink for further feedback loop continuation until the motor approximated to final position. 
             </p>
             <br></br>
-            <p>This project also utlized Simulink for the digital writes to the servo motor and solenoid. The servo motor was pushed a PWM signals to rotate 
+            <p>This project also utilized Simulink for the digital writes to the servo motor and solenoid. The servo motor was pushed a PWM signal to rotate 
                 the pointer to the desired aim angle. The solenoid control block issued a simple digital high/low command to trigger the shot mechanism.</p>
 			<br></br>
 			<p>The combination of these two control elements formed the full Simulink pipeline for the PoolShark project. The DC motor positioned the cue along the gantry X-axis, then the servo adjusted to its commanded position, and after a brief delay the solenoid fired.
 			This sequencing ensured a predictable, repeatable, and safe motion, allowing the system to translate X position in millimeters and desired angle into physical actions</p>
 			
-			<p><strong>Primary Contributers:</strong> <strong><a href="https://www.linkedin.com/in/camren-khoury-404655226/" target="_blank">Camren Khoury</a></strong>, <strong><a href="https://www.linkedin.com/in/john-walker-bolding/" target="_blank">John Walker Bolding</a></strong></p>
+			<p><strong>Primary Contributors:</strong> <strong><a href="https://www.linkedin.com/in/camren-khoury-404655226/" target="_blank">Camren Khoury</a></strong>, <strong><a href="https://www.linkedin.com/in/john-walker-bolding/" target="_blank">John Walker Bolding</a></strong></p>
 		</div>
 
 		<div class="project-desc-img-group">
@@ -149,13 +149,13 @@ a:hover {
                 The DC motor subsystem uses a motor driver to safely interface the motor with the Arduino, due to differences in voltage and current requirements between the two. 
                 The DC motor is connected to a 12V DC Power supply since the microcontroller can not supply a voltage over 5V safely. The arduino provides PWM and directional signals to the motor driver,
                 allowing control of both motor speed and rotational direction. The servo subsystem uses a standard PWM control signal from the Arduino digital write to set its rotational angle. It receives its own
-                5V and ground lines and the interal electronics will interpret the PWM commands and self-adjust the position until the servo essentially fights to the desired position.
-                The solenoid subsystem requiers a N-channel MOSFET which acts as a high-current switch to power the solenoid on command. The Arduino is responsible for driving
-                the MOSFET gate through the 47 ohm resistor, which slightly removes overcurrent and reduces noise. The 10k ohm resistor is placed on the MOSFET gate to ensured the
-                solenoid remains off during start up or if the control pin is undecided and currently neither driving 1 or 0.
+                5V and ground lines and the internal electronics will interpret the PWM commands and self-adjust the position until the servo essentially fights to the desired position.
+                The solenoid subsystem requires a N-channel MOSFET which acts as a high-current switch to power the solenoid on command. The Arduino is responsible for driving
+                the MOSFET gate through the 47 ohm resistor, which slightly removes overcurrent and reduces noise. The 10k ohm resistor is placed on the MOSFET gate to ensure the
+                solenoid remains off during startup or if the control pin is undecided and currently neither driving 1 or 0.
             </p>
 			
-			<p><strong>Primary Contributer:</strong> <strong><a href="https://www.linkedin.com/in/blake-morgan-001b182a2/" target="_blank">Blake Morgan</a></strong><p>
+			<p><strong>Primary Contributor:</strong> <strong><a href="https://www.linkedin.com/in/blake-morgan-001b182a2/" target="_blank">Blake Morgan</a></strong><p>
         </div>
             <div class="project-desc-img">
             <img src="../images/PoolSharkCircuitDiagram.png" alt="Pool Shark Circuit Diagram">
@@ -173,9 +173,9 @@ a:hover {
     <!-- Vision Overview -->
     <h3 class="section-title">Vision System Overview</h3>
     <div class="project-desc-section project-desc-left">
-        <div class="project-desc-text"><p>The vision system relies on a multiple coordinated computer-vision elements including homography correction,
+        <div class="project-desc-text"><p>The vision system relies on multiple coordinated computer-vision elements including homography correction,
             HSV color masking, and object morphology and reconstruction. The combination of these elements takes a raw out-of-position webcam frame and converts it
-            into a top-down birds-eye repreentation of the table with specific billiard balls and their locations located.
+            into a top-down bird's-eye representation of the table with specific billiard balls and their locations located.
         </p></div>
     </div>
 
@@ -185,10 +185,10 @@ a:hover {
     <div class="project-desc-section project-desc-left">
 
         <div class="project-desc-text">
-            <p>The homography transformation converts the angled webcam image into a proportionate bird's-eye view, top-down representation of the pool table 
+            <p>The homography transformation converts the angled webcam image into a proportionate bird's-eye view, top-down representation of the pool table. 
                 The camera is mounted off to the side in the initial gantry design, which became a limitation when it came to computer vision, thus homography
                 was implemented to give a better view of the table and to account for perspective distortion. From the initial perspective objects that are located
-                further from the camera, appear smaller and have less pixels associated per mm in real life, and the table edges are skewed. The homography correct this by
+                further from the camera, appear smaller and have less pixels associated per mm in real life, and the table edges are skewed. The homography corrects this by
                 mapping the four corners of the real table to a rectangular coordinate system during an early calibration step.
             </p>
 			
@@ -202,7 +202,7 @@ a:hover {
             <p>
 
             </p>
-			<p><strong>Primary Contributers:</strong> <strong><a href="https://www.linkedin.com/in/william-mcglone-98617b265/" target="_blank">William McGlone</a></strong>, <strong><a href="https://www.linkedin.com/in/camren-khoury-404655226/" target="_blank">Camren Khoury</a></strong></p>
+			<p><strong>Primary Contributors:</strong> <strong><a href="https://www.linkedin.com/in/william-mcglone-98617b265/" target="_blank">William McGlone</a></strong>, <strong><a href="https://www.linkedin.com/in/camren-khoury-404655226/" target="_blank">Camren Khoury</a></strong></p>
         </div>
 
         <div class="project-desc-img-group">
@@ -239,7 +239,7 @@ a:hover {
         <div class="project-desc-text">
             <p>Work in Progress!</p>
             <p>Work in Progress!</p>
-			<p><strong>Primary Contributer:</strong> <strong><a href="https://www.linkedin.com/in/camren-khoury-404655226/" target="_blank">Camren Khoury</a></strong><p>
+			<p><strong>Primary Contributor:</strong> <strong><a href="https://www.linkedin.com/in/camren-khoury-404655226/" target="_blank">Camren Khoury</a></strong><p>
         </div>
 		
 
@@ -261,7 +261,7 @@ a:hover {
             </p>
 
             <p>
-            Once the user clicks the “Play Game” button, the calibration stage starts to gather user-inputted corners of the pool table to later be used to compute the homography of the image. 
+            Once the user clicks the “Play Game” button, the calibration stage starts to gather user-input corners of the pool table to later be used to compute the homography of the image. 
             This calibration step then leads to the PoolShark control page, which shows the most recent active frame and gives the user input options for which ball to hit and which pocket to hit it into.
             From this point on, the system is fully automated, only requiring user input when there is a change in the desired ball or pocket.
             </p>
@@ -271,7 +271,7 @@ a:hover {
             Another potential design improvement would be to actively display the centroid values to the user in the camera feed that is currently being displayed.
             </p>
 
-			<p><strong>Primary Contributer:</strong><strong> <a href="https://www.linkedin.com/in/camren-khoury-404655226/" target="_blank">Camren Khoury</a></strong></p>
+			<p><strong>Primary Contributor:</strong><strong> <a href="https://www.linkedin.com/in/camren-khoury-404655226/" target="_blank">Camren Khoury</a></strong></p>
         </div>
 
         <div class="project-desc-img-group">
@@ -300,7 +300,7 @@ a:hover {
     <div class="project-desc-section project-desc-right">
         <div class="project-desc-text">
             <p>Work in Progress!</p>
-			<p><strong>Primary Contributers:</strong> <strong><a href="https://www.linkedin.com/in/david-bootle/" target="_blank">David Bootle</a></strong>, <strong><a href="https://www.linkedin.com/in/william-mcglone-98617b265/" target="_blank">William McGlone</a></strong>, <strong><a href="https://www.linkedin.com/in/john-walker-bolding/" target="_blank">John Walker Bolding</a></strong></strong></p>
+			<p><strong>Primary Contributors:</strong> <strong><a href="https://www.linkedin.com/in/david-bootle/" target="_blank">David Bootle</a></strong>, <strong><a href="https://www.linkedin.com/in/william-mcglone-98617b265/" target="_blank">William McGlone</a></strong>, <strong><a href="https://www.linkedin.com/in/john-walker-bolding/" target="_blank">John Walker Bolding</a></strong></strong></p>
         </div>
         <div class="project-desc-img-group">
             <div class="project-desc-img">
@@ -320,8 +320,30 @@ a:hover {
     <h3 class="section-title">Shot Geometry</h3>
     <div class="project-desc-section project-desc-left">
         <div class="project-desc-text">
-            <p>Work in Progress!</p>
-			<p><strong>Primary Contributer:</strong> <strong><a href="https://www.linkedin.com/in/john-walker-bolding/" target="_blank">John Walker Bolding</a></strong></p>
+        <p>
+            The shot-geometry module computes the final two values needed for the Simulink Motor Model to initiate movement. 
+            These two values are the rotation angle of the servo motor pointing the cue and the X-position the cue needs to be at on the table via the gantry carriage. 
+            These values are calculated directly from the top-down coordinate frame produced by the homography transformation. 
+            The function first identifies the cue ball and the selected target ball from the image detection structure that is passed from the detectBallsHSV.m pipeline. 
+            If either ball is not available, the computation defaults to just potting the cue ball.
+        </p>
+
+        <p>
+            Pocket selection determines the desired travel direction of the target ball, which in this project is always away from the gantry. 
+            Each pocket is represented by fixed pixel-coordinate locations on the warped table image. 
+            Once the pocket location is known, the geometry between the target ball and pocket is used to compute the "ghost ball" location, 
+            which is the point where the cue ball must make contact to send the target into the selected pocket. 
+            The ghost ball is offset from the target ball by the estimated cue radius, which is calculated from the ball's bounding box.
+        </p>
+
+        <p> After the ghost ball location is identified, the function computes the vector from the cue ball to the ghost point and converts 
+            it into a servo rotation angle within the 0 to 180 degree range required by the pointer assembly. The X-axis carriage placement is 
+            then determined by mapping the ghost ball coordinates from pixel space into real world millimeters based on the calibrated table 
+            height and the usable travel distance of the DC motor driven gantry. The function finally passes the calculated servo angle, X-position, and 
+            a constant maximum solenoid power to the poolSharkExecuteShot MATLAB file which is responsible for communicating with the Simulink Motor Model.
+
+        </p>
+			<p><strong>Primary Contributor:</strong> <strong><a href="https://www.linkedin.com/in/john-walker-bolding/" target="_blank">John Walker Bolding</a></strong></p>
         </div>
         <div class="project-desc-img">
             <img src="../images/geometrysketch.png">
