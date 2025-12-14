@@ -810,6 +810,29 @@ body {
     }
 }
 
+/* Wrapper that forces image to match the text width above */
+.flowchart-wrapper {
+    width: 100%;
+    max-width: 900px;          /* matches your content width */
+    margin: 2rem auto;         /* centers it and adds spacing */
+}
+
+/* Responsive image that keeps perfect aspect ratio */
+.flowchart-wrapper img {
+    width: 100%;               /* fill entire available width */
+    height: auto;              /* scale proportionally */
+    display: block;            /* removes bottom whitespace */
+    border-radius: 8px;        /* optional clean look */
+}
+
+/* Caption styling */
+.flowchart-caption {
+    text-align: center;
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
 
 
 .white-divider {
