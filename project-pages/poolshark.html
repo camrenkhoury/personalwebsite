@@ -226,6 +226,10 @@ a:hover {
 
         <div class="project-desc-img-group">
             <div class="project-desc-img">
+                <img src="../images/PHExampleDetection.png" alt="Detection Homo">
+                <p class="photo-caption">Post-Homography Example with Detection</p>
+            </div>
+            <div class="project-desc-img">
                 <img src="../images/pool_detection.png" alt="Detection">
                 <p class="photo-caption">Eight Ball Color Detection (Blue Disabled)</p>
             </div>
@@ -237,8 +241,33 @@ a:hover {
         </div>
 
         <div class="project-desc-text">
-            <p>Work in Progress!</p>
-            <p>Work in Progress!</p>
+        <p>
+            The image detection system analyzes the post-homography camera frame to identify each billiard ball on the table. 
+            Homography correction ensures a consistent top-down coordinate frame, which provides a reliable basis for color detection 
+            and centroid extraction. The system then processes this corrected frame through several stages that identify ball colors, 
+            refine shapes, and verify geometric consistency. The overall goal is to produce a clean and accurate set of ball positions 
+            that can be passed to later components such as shot-geometry calculations and motor control.
+        </p>
+
+        <p>
+            Color identification is performed in the HSV color space, which offers more stable segmentation under varying lighting 
+            compared to traditional RGB thresholding. Each ball color has a defined hue, saturation, and value range that is used to 
+            generate a raw mask for that specific color. The system cycles through every color class and extracts candidate regions that 
+            match the expected HSV profile. This is helpful when objects in the frame may share similar shades but differ in saturation 
+            or brightness. After initial thresholding, geometric checks such as size, aspect ratio, and boundary location are applied to 
+            reject false positives. This stage produces filtered color masks that isolate the most likely regions corresponding to actual 
+            billiard balls.
+        </p>
+
+        <p>
+            After generating the color masks, the system applies morphological filtering to remove noise and reconstruct cleaner ball 
+            shapes. Morphology eliminates speckles, fills small gaps, and helps distinguish between objects that share a similar color but 
+            do not match the expected size or shape of a billiard ball. Circular reconstruction is then used to rebuild each ball into a 
+            more uniform circular region. This helps maintain consistent centroid placement even when the real ball contains white number 
+            patches that break the color mask or when lighting distorts the ball edge. The final output is a structured list of detected 
+            balls that includes color, centroid, area, and other properties required for accurate shot-geometry computation.
+        </p>
+
 			<p><strong>Primary Contributor:</strong> <strong><a href="https://www.linkedin.com/in/camren-khoury-404655226/" target="_blank">Camren Khoury</a></strong><p>
         </div>
 		
@@ -299,18 +328,29 @@ a:hover {
     <h3 class="section-title">Mechanical Design</h3>
     <div class="project-desc-section project-desc-right">
         <div class="project-desc-text">
-            <p>Work in Progress!</p>
+            <p>
+            The mechanical design of the PoolShark system provides the physical foundation that supports the computer vision hardware, gantry motion system, and firing assembly. An aluminum extrusion chassis was used as the primary structural framework due to its rigidity, modularity, and compatibility with off-the-shelf mounting hardware. This chassis allowed the team to securely integrate multiple subsystems while maintaining alignment and stability during operation.
+            </p>
+
+            <p>
+            Lateral positioning of the firing assembly is achieved through a belt-driven gantry system powered by a DC motor. Timing belts and pulleys convert rotational motion into smooth, controllable linear motion across the width of the pool table. Custom brackets and mounting plates were designed to interface the motor and belt system with the aluminum frame, enabling precise positioning while minimizing vibration and mechanical noise.
+            </p>
+
+            <p>
+            The firing assembly integrates a servo motor for angular aiming and a solenoid for delivering the impulse required to strike the cue ball. These components are housed in custom 3D-printed mounts that prioritize rigidity and compactness to reduce mechanical play. By rigidly coupling the servo and solenoid to the gantry system, the mechanical design ensures consistent shot alignment and repeatable firing behavior during automated operation.
+            </p>
+
 			<p><strong>Primary Contributors:</strong> <strong><a href="https://www.linkedin.com/in/david-bootle/" target="_blank">David Bootle</a></strong>, <strong><a href="https://www.linkedin.com/in/william-mcglone-98617b265/" target="_blank">William McGlone</a></strong>, <strong><a href="https://www.linkedin.com/in/john-walker-bolding/" target="_blank">John Walker Bolding</a></strong></strong></p>
         </div>
         <div class="project-desc-img-group">
             <div class="project-desc-img">
                 <img src="../images/gantry_cad.png">
-                <p class="photo-caption">Gantry CAD</p>
+                <p class="photo-caption">Gantry CAD Model</p>
             </div>
 
             <div class="project-desc-img">
                 <img src="../images/beltwithsolenoid.jpg">
-                <p class="photo-caption">Belt and with Solenoid Attached</p>
+                <p class="photo-caption">Final gantry with belt-driven motion</p>
             </div>
         </div>
     </div>
