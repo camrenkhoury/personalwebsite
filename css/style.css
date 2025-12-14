@@ -146,6 +146,42 @@ body {
     color: #d3d3d3;
 }
 
+#about-info {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+@media (max-width: 800px) {
+
+    #about-info {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px 15px;
+        margin: 0;
+        overflow: visible;
+    }
+
+    .desc-section {
+        flex-direction: column !important;
+        min-width: 0;      /* ← THE REAL FIX */
+    }
+
+    .about-text,
+    .desc-text {
+        width: 100%;
+        max-width: 100%;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        hyphens: auto;
+    }
+
+    .desc-img {
+        width: 100%;
+        max-width: 260px;
+        margin: 15px auto 0 auto;
+    }
+}
 /* ============================
    CARD GRID (Profiles Section)
 ============================ */
@@ -477,7 +513,8 @@ body {
 
 .about-text {
     flex: 1;
-    min-width: 420px;
+    width: min(420px, 100%);   /* use 420px when possible, shrink on small screens */
+    min-width: 0;              /* prevents clipping on mobile */
 }
 
 /* Make About page inline links blue instead of orange */
