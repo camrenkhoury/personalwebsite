@@ -810,28 +810,35 @@ body {
     }
 }
 
-/* Wrapper that forces image to match the text width above */
+/* Wrapper that forces centering + fixed max width */
 .flowchart-wrapper {
     width: 100%;
-    max-width: 900px;          /* matches your content width */
-    margin: 2rem auto;         /* centers it and adds spacing */
+    max-width: 900px;          /* matches your content column */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;        /* ensures image aligns in wrapper */
 }
 
-/* Responsive image that keeps perfect aspect ratio */
+/* Responsive centered image */
 .flowchart-wrapper img {
-    width: 100%;               /* fill entire available width */
-    height: auto;              /* scale proportionally */
-    display: block;            /* removes bottom whitespace */
-    border-radius: 8px;        /* optional clean look */
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;        /* double centering guarantee */
+    border-radius: 8px;
 }
 
-/* Caption styling */
+/* Caption centered below */
 .flowchart-caption {
     text-align: center;
     margin-top: 0.75rem;
     font-size: 0.9rem;
     color: #aaa;
 }
+
 
 
 
