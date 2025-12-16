@@ -380,6 +380,7 @@ body {
 }
 
 
+
 /* ============================
    BUTTONS
 ============================ */
@@ -851,4 +852,67 @@ body {
 
 a, a:visited {
     color: white !important;
+}
+
+.python-workspace {
+  display: grid;
+  grid-template-columns: 0.6fr 1.2fr 1.2fr;
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.python-menu,
+.python-terminal,
+.python-code {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+
+/* =============================
+   DOCUMENT IMAGE GROUP (Phase Docs)
+============================= */
+
+.doc-image-group {
+    flex-direction: row;        /* horizontal stack */
+    align-items: stretch;       /* equal height */
+    gap: 22px;
+}
+
+/* Each image fills available column */
+.doc-image-group .project-desc-img {
+    flex: 1;                    /* equal width columns */
+    max-width: none;
+}
+
+/* Document-style images */
+.doc-image-group .project-desc-img img {
+    width: 100%;                /* full column width */
+    height: 100%;               /* stretch vertically */
+    max-width: 300px;
+    min-width: 0;
+    object-fit: contain;        /* preserve page proportions */
+    background: #111;
+    padding: 8px;
+    border: 1px solid rgba(255,255,255,0.12);
+}
+
+/* =============================
+   FULL-WIDTH PROJECT IMAGE
+============================= */
+
+.project-wide-image {
+    width: 100%;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.project-wide-image img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    object-fit: contain;
 }

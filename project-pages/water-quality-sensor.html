@@ -1,17 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Water Quality Sensor – Camren Khoury</title>
-	<link rel="stylesheet" href="../css/style.css?v=2">
+    <link rel="stylesheet" href="../css/style.css?v=2">
+
+    <style>
+        /* =============================
+        PROJECT PAGE TEXT COLORS
+        (Scoped, non-destructive)
+        ============================= */
+
+        /* Normal content text */
+        .project-page p,
+        .project-page li,
+        .project-page span {
+            color: #ffffff;
+        }
+
+        /* =============================
+        HEADINGS
+        ============================= */
+
+        /* H1 / H2 → BLUE */
+        .project-page h1,
+        .project-page h2 {
+            color: #00205b;
+        }
+
+        /* H3 and smaller → ORANGE */
+        .project-page h3,
+        .project-page h4,
+        .project-page h5,
+        .project-page h6 {
+            color: #f56600;
+        }
+
+        /* =============================
+        SECTION TITLES
+        ============================= */
+
+        .project-page .section-title {
+            color: #f56600;
+        }
+
+        /* =============================
+        LINKS (CONTENT ONLY, NOT NAV)
+        ============================= */
+
+        .project-page a:not(.nav-links a):hover {
+            color: #f56600;
+        }
+
+        /* =============================
+        NAV ACTIVE STATE (PROJECT PAGE ONLY)
+        ============================= */
+
+        /* Turn active nav item orange when a project page exists */
+        body:has(.project-page) .nav-links a.active {
+            color: #f56600 !important;
+        }
+
+        .involvement-grid {
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        .involvement-title .section-title {
+            color: #ffffff !important;
+        }
+
+
+        .involvement-column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Title block */
+        .involvement-title {
+            height: 3.6em;                 /* fixed title zone */
+            display: flex;
+            align-items: flex-end;         /* bottom-align text */
+        }
+
+        /* Title text */
+        .involvement-title h3 {
+            color: #ffffff;                /* white headers */
+            margin: 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        /* Names always start at same Y */
+        .involvement-names {
+            margin-top: 8px;
+        }
+
+
+    </style>
+
 </head>
 
 <body>
 
 <header class="site-header">
     <nav class="nav-container">
-        <div class="nav-logo"><a href="/">CAMREN KHOURY</a></div>
+        <div class="nav-logo"><a href="/">CAMREN J KHOURY</a></div>
         <ul class="nav-links">
             <li><a href="../about.html">About</a></li>
             <li><a href="../portfolio.html" class="active">Portfolio</a></li>
@@ -20,9 +116,294 @@
     </nav>
 </header>
 
-<section class="section-wrapper">
-    <h1 class="section-title">ESP32 Water Quality Sensor</h1>
-    <p>Content coming soon. This page will outline the full sensor system, PCB, firmware, and deployment.</p>
+<div class="project-banner">
+        <img src="../images/water-quality-sensor.png" alt="AI Generated Water Cartoon Art">
+</div>
+
+<section class="section-wrapper project-page">
+
+    <!-- =============================
+         INTRODUCTION / PROJECT ORIGIN
+    ============================== -->
+    <h1 class="section-title">Water Quality Sensor System</h1>
+
+    <p>
+        I started and currently lead the Water Quality Sensor System project with
+        <strong>Clemson Engineers for Developing Communities (CEDC)</strong> as part of the
+        Technical Solutions program. The project began as effort to address
+        gaps in water quality monitoring within resource-limited and/or underserved
+        communities. After defining the initial vision and scope, I was able to gather a multidisciplinary
+        team of five additional members to continue development, research, and planning under
+        the structured CEDC project framework.
+    </p>
+
+    <p>
+        CEDC projects follow a deliberate, multi-phase development process that emphasizes
+        planning, sustainability, leave-behind documentation, and long-term community impact before
+        technical implementation. The goal of this project  is to design a low-cost, modular water quality monitoring system 
+        intended to provide  continuous insight into changes in water quality. Rather than certifying water as potable,
+        the system is designed to function as an early-warning and decision-support tool that can
+        indicate treatment failure, contamination risk, or infrastructure degradation. This project aims to target communities that 
+        currently have underdeveloped or even no current water quality testing procedures between the site of water collection and
+        the point of consumption.
+    </p>
+
+    <hr class="white-divider">
+
+    <h2 class="section-title">Project Involvement (Fall 2024 – Spring 2026)</h2>
+        <div class="project-desc-section involvement-grid">
+
+            <div class="involvement-column">
+                <div class="involvement-title">
+                    <h3>Project Lead:</h3>
+                </div>
+                <div class="involvement-names">
+                    <strong><a href="https://www.linkedin.com/in/camren-khoury-404655226/" target="_blank"> Camren Khoury </a></strong><br>
+                </div>
+            </div>
+
+            <div class="involvement-column">
+                <div class="involvement-title">
+                    <h3>Contributors:</h3>
+                </div>
+                <div class="involvement-names">
+                    <p>
+                    <strong><a href="https://www.linkedin.com/in/noah-friedman-0016b9345/" target="_blank"> Noah Friedman </a></strong><br>
+                        <a href="https://www.linkedin.com/in/matthew-mugrage-782507381/" target="_blank"> Matthew Mugrage </a><br>
+                        <a href="https://www.linkedin.com/in/salvador-ruiz-27938b386/" target="_blank"> Salvador Ruiz </a><br>
+                        <a href="https://www.linkedin.com/in/yordan-zlatev/" target="_blank"> Yordan Zlatev </a><br>
+                        <a href="https://www.linkedin.com/in/justin-keller-4b21a2368/" target="_blank"> Justin Keller </a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="involvement-column">
+                <div class="involvement-title">
+                    <h3>Functional Management:</h3>
+                </div>
+                <div class="involvement-names">
+                    <p>
+                        <a href="https://www.linkedin.com/in/ataozer/" target="_blank"><strong>Ata Ozer</strong></a><br>
+                         <a href="https://www.linkedin.com/in/olivia-spencer-9934751b9/" target="_blank">Olivia Spencer</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="involvement-column">
+                <div class="involvement-title">
+                    <h3>Faculty:</h3>
+                </div>
+                <div class="involvement-names">
+                    <a href="https://www.linkedin.com/in/davidvaughnresilience/" target="_blank"><p><strong>David Vaughn</strong></p></a>
+                </div>
+            </div>
+
+            <div class="involvement-column">
+                <div class="involvement-title">
+                    <h3>ECE and Industry Advisors:</h3>
+                </div>
+                <div class="involvement-names">
+                    <a href="https://www.clemson.edu/cecas/departments/ece/faculty_staff/faculty/hraza.html" target="_blank"><p>Dr. Hassan Raza (Future)</p></a>
+                </div>
+            </div>
+
+        </div>
+
+    <hr class="white-divider">
+
+    <!-- =============================
+         CEDC PHASE STRUCTURE
+    ============================== -->
+    <h2 class="section-title">CEDC Project Structure</h2>
+
+    <p>
+        Project development follows CEDC's project lifecycle. This protocol breaks up the project
+        into four phases (0–3), ranging from early project planning through deployment,
+        delivery, and long-term maintenance. 
+    </p>
+
+    <div class="project-wide-image">
+        <img src="../images/ProjectLifecycle.png" alt="CEDC Project Lifecycle Diagram">
+        <p class="photo-caption">CEDC Project Lifecycle</p>
+    </div>
+
+    <hr class="white-divider">
+
+    <!-- =============================
+         PHASE 0 — PROJECT CHARTER
+    ============================== -->
+    <h3 class="section-title">Phase 0 — Project Charter & Planning</h3>
+
+    <div class="project-desc-section project-desc-left">
+
+        <div class="project-desc-text">
+            <p>Phase 0 focused on establishing the foundational goals, scope, stakeholders, risks, and assumptions of the project. 
+                The project charter is a high-level planning document and not a finalized technical design.</p>
+
+            <p>From this phase, the team recognized that there is a continuous need for low-cost water quality monitoring in regions
+                where conventional laboratory testing and industrial systems are infeasible due to cost, infrastructure, or technical 
+                expertise.</p>
+
+            <p>Early planning considered the possibility of a modular sensor system that could measure up to the following parameters:
+                turbidity, pH, conductivity, TDS, temperature, and chlorine residual. No hardware or firmware development took place 
+                in Phase 0.</p>
+
+            <p>   
+                <strong>Primary Contributors:
+                <a href="https://www.linkedin.com/in/camren-khoury-404655226/" target="_blank">Camren Khoury</a>,
+                <a href="https://www.linkedin.com/in/noah-friedman-0016b9345/" target="_blank">Noah Friedman</a>,
+                <a href="https://www.linkedin.com/in/ataozer/" target="_blank">Ata Ozer</a></strong>
+            </p>
+
+        </div>
+
+        <div class="project-desc-img-group doc-image-group">
+            <div class="project-desc-img">
+                <img src="../images/Phase0DocumentHeaderPage.png" alt="Phase 0 Charter Cover">
+                <p class="photo-caption">Project Charter Cover Page</p>
+            </div>
+
+            <div class="project-desc-img">
+                <img src="../images/Phase0DocumentExcerpt.png" alt="Phase 0 Charter Excerpt">
+                <p class="photo-caption">Project Charter Excerpt</p>
+            </div>
+        </div>
+
+    </div>
+
+    <hr class="white-divider">
+
+    <!-- =============================
+         PHASE 1 — LITERATURE REVIEW
+    ============================== -->
+    <h3 class="section-title">Phase 1 — Literature Review & Context Analysis</h3>
+
+    <div class="project-desc-section project-desc-right">
+
+        <div class="project-desc-text">
+            <p>Phase 1 involved an examination of current water quality testing practices, low-cost sensors, 
+                and automated systems in use in both developed and developing regions.</p>
+
+            <p>The literature review helped to focus the project scope on the gaps that exist in existing 
+                solutions, especially where contamination tends to happen in water distribution systems 
+                after the water has been treated. There was a focus on trend detection and not certification 
+                for regulatory purposes.</p>
+
+            <p>Results from this phase have now become the definitive guide for project management
+                 direction instead of the initial assumptions that were framed in Phase 0.</p>
+            <p>   
+                <strong>Primary Contributors:
+                <a href="https://www.linkedin.com/in/camren-khoury-404655226/" target="_blank">Camren Khoury</a></strong>
+            </p>
+        </div>
+
+        <div class="project-desc-img-group doc-image-group">
+            <div class="project-desc-img">
+                <img src="../images/Phase1DocumentHeaderPage.png" alt="Literature Review Cover">
+                <p class="photo-caption">Literature Review Cover Page</p>
+            </div>
+
+            <div class="project-desc-img">
+                <img src="../images/Phase1DocumentExcerpt.png" alt="Literature Review Excerpt">
+                <p class="photo-caption">Literature Review Excerpt</p>
+            </div>
+        </div>
+
+    </div>
+
+    <hr class="white-divider">
+
+    <!-- =============================
+         PARALLEL WORK — DATA DASHBOARD
+    ============================== -->
+    <h3 class="section-title">Parallel Effort Data Dashboard Development</h3>
+
+    <div class="project-desc-section project-desc-left">
+
+        <div class="project-desc-text">
+            <p>
+                In parallel with early planning and research, a separate team was tasked with developing a data visualization dashboard.
+                This effort was led by undergraduate computer science and computer engineering students and focused on establishing
+                baseline data handling, visualization approaches, and user interaction flow.
+            </p>
+
+            <p>
+                At the current stage, the dashboard operates using simulated data generated through a structured spreadsheet that
+                approximates expected sensor outputs. This method allows core dashboard functionality and visualizations to be
+                assembled and reviewed ahead of live sensor integration.
+            </p>
+
+            <p style="margin-top: 12px;">
+                <a href="https://github.com/camrenkhoury/cedcWQSPdashboard" target="_blank">
+                    View the Dashboard GitHub Repository
+                </a>
+            </p>
+
+            <p>
+                <strong>Primary Contributors:</strong>
+                <strong>
+                    <a href="https://www.linkedin.com/in/matthew-mugrage-782507381/" target="_blank">Matthew Mugrage</a>,
+                    <a href="https://www.linkedin.com/in/camren-khoury-404655226/" target="_blank">Camren Khoury</a>,
+                    <a href="https://www.linkedin.com/in/yordan-zlatev/" target="_blank">Yordan Zlatev</a>,
+                    <a href="https://www.linkedin.com/in/justin-keller-4b21a2368/" target="_blank">Justin Keller</a>
+                </strong>
+            </p>
+        </div>
+
+        <div class="project-desc-img">
+            <img src="../images/dashboardprototypev1.png" alt="Dashboard Prototype">
+            <p class="photo-caption">Early Data Dashboard Prototype</p>
+        </div>
+
+    </div>
+
+    <hr class="white-divider">
+
+    <!-- =============================
+         CURRENT TECHNICAL DIRECTION
+    ============================== -->
+    <h2 class="section-title">Current Technical Direction</h2>
+
+    <div class="project-desc-section project-desc-right">
+        <div class="project-desc-text">
+            <p>
+                While detailed system design has not yet begun, several early
+                directional decisions guide future development. The current
+                candidate microcontroller platform is the
+                <strong>ESP32-WROOM</strong>, selected for its affordability,
+                wireless capabilities, and community support.
+            </p>
+
+            <p>
+                Additional processing or networking support using a Raspberry Pi
+                is under consideration but has not been finalized. Sensor
+                selection remains conceptual and will be validated through
+                testing, availability analysis, and alignment with literature
+                findings.
+            </p>
+        </div>
+
+        <div class="project-desc-img">
+            <img src="../images/esp32.png" alt="ESP32 Platform">
+            <p class="photo-caption">Early MCU Consideration</p>
+        </div>
+    </div>
+
+    <hr class="white-divider">
+
+    <!-- =============================
+         FUTURE PHASES
+    ============================== -->
+    <h2 class="section-title">Planned Phases & Future Work</h2>
+
+    <p>
+        Future phases will focus on detailed system design, hardware prototyping,
+        firmware development, calibration procedures, and controlled field
+        testing. These sections will be expanded as the project transitions from
+        planning into implementation. The next phase in development will be Phase 2: Design & Testing,
+        which will be finalized by the end of the Spring 2026 semester.
+    </p>
+
 </section>
 
 <footer class="site-footer">
