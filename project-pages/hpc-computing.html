@@ -44,11 +44,6 @@
 <section class="section-wrapper project-page">
     <h1 class="section-title">High-Performance Computing</h1>
 
-    <p>
-        Content coming soon. This page will cover foundational HPC concepts including distributed systems,
-        parallel computing, scaling workloads, and performance benchmarking.
-    </p>
-
     <h3 style="margin-top: 30px;">Primary Project: Raspberry Pi Cluster</h3>
     <p>
         One major focus of this HPC section will be a detailed walkthrough of building and configuring a 
@@ -69,7 +64,7 @@
     </p>
 
     <p>
-        • Competed in the 2025 SBCC Small-Board Cluster Competition, operating an 11-node cluster and 
+        • Competed in the 2025 SBCC Small-Board Cluster Competition, operating an ~11-node cluster and 
         running distributed workloads including password-cracking and ParFEMWARP. Completed 
         single-node execution and diagnosed multi-node MPI failures; placed Top-3 in systems 
         interview.
@@ -82,9 +77,57 @@
         </a>
     </strong>
     <br>
-    <p>
-        Additional details, diagrams, and benchmarking results will be added soon.
-    </p>
+    <h2 class="section-title">Fundamental Concepts and Objectives for Semester</h2>
+
+	<div class="project-desc-section project-desc-left">
+		<div class="project-desc-text">
+			<p>
+			  During the course of the Spring 2025 semester, the main system design used was a four-node Raspberry Pi cluster designed
+			  to model the core architecture of a <strong>distributed-memory</strong> <strong>high-performance computing</strong> system. Each node in the cluster had its own independent
+			  <strong>CPU</strong>, memory, storage, and Linux image, while inter-node communication was handled through a dedicated <strong>Ethernet switch</strong>. Together, the nodes formed
+			  a private local network for distributed workloads.
+			</p>
+			<p>
+			  One node (typically the top unit in the stack) functioned as the <strong>head node</strong>. The head node coordinated the other three <strong>worker nodes</strong> by managing
+			  <strong>SSH</strong> access, distributing jobs, orchestrating file transfers, and exporting shared resources (e.g., the <strong>NFS</strong> shared filesystem) used across the cluster.
+			</p>
+			<p>
+			  In a distributed-memory model, each node operates as its own independent machine rather than sharing a single memory space. Any multi-node workload required the coordination
+			  between nodes, and the network between the nodes acted as a backplane that connected the compute power of multiple Pi nodes together. The dedicated switch used in junction
+			  with the cluster provided isolated <strong>communication</strong> between nodes, while the head node coordinated the sharing of resources and provided the unification of the work environment across the cluster.
+			  This setup replicates on a small scale how larger <strong>HPC</strong> systems separate computer responsibilities across many nodes in research or real-world industry practices.
+			</p>
+			<p>
+			  <strong>Message Passing Interface (MPI)</strong> was set up after the NFS system and acted as the core programming model used to make the distributed-memory
+			  cluster behave like a single parallel system. Each Raspberry Pi had its own private memory; this meant that processes could not share variables
+			  directly and had to coordinate by sending messages over the network. MPI provided a structure for launching the same program, code, or application across multiple nodes.
+			  This was done by assigning each process a <strong>rank</strong> and supporting data exchange and synchronization through basic operations like send/receive. The head node served as the launching
+			  and directing point for the MPI jobs, similar to it controlling other processes.
+			</p>
+			<p>
+			  <strong>High-Performance Linpack (HPL)</strong> was used as the primary benchmark to quantify the cluster's compute throughput and estimate how well performance would scale as
+			  additional nodes and processes were introduced. HPL primarily solves a large system of linear equations using <strong>LU factorization</strong>, making it a
+			  standard way to measure performance in <strong>FLOPS</strong> under a hybrid mix of computation and communication. Running HPL on the four-node cluster showed the tradeoff between
+			  compute capability and the overhead cost of communication in a distributed-memory system like a cluster, where performance depends on raw CPU speed but also efficient data exchange
+			  and design. Parameters such as block size (<strong>NB</strong>) and process grid layout (<strong>P×Q</strong>) are typically tuned to adjust a system's data exchange design.
+			</p>
+		</div>
+
+		<!-- RIGHT IMAGE COLUMN (stacked) -->
+		<div class="project-desc-img-group" style="max-width: 350px;">
+			<div class="project-desc-img" style="max-width: 350px; min-width: 0; text-align: center;">
+				<img src="../images/assembledpicluster.jpg" alt="Assembled four-node Raspberry Pi cluster" style="max-width: 300px; min-width: 0;">
+				<div class="photo-caption">Assembled 4-Node Pi Cluster</div>
+			</div>
+
+			<!-- Replace with your second photo when available -->
+			<div class="project-desc-img" style="max-width: 350px; min-width: 0; text-align: center;">
+				<img src="../images/palmetto-racks.jpg" alt="Palmetto 2 Cluster (alternate view)" style="max-width: 300px; min-width: 0;">
+				<div class="photo-caption">Palmetto 2 Cluster for Comparison</div>
+			</div>
+		</div>
+
+	</div>
 </section>
 
 <footer class="site-footer">
