@@ -564,6 +564,38 @@ strong {
     text-shadow: 0 1px 0 rgba(255, 248, 212, 0.22), 0 0 18px rgba(217, 173, 59, 0.12);
 }
 
+.award-title-lockup {
+    display: flex;
+    align-items: center;
+    gap: clamp(0.65rem, 1.8vw, 1.1rem);
+    width: 100%;
+    min-width: 0;
+}
+
+.award-title-lockup .award-title {
+    flex: 1 1 auto;
+    min-width: 0;
+    font-size: clamp(2.15rem, 4.3vw, 3.3rem);
+    line-height: 1.03;
+    text-wrap: balance;
+    overflow-wrap: normal;
+}
+
+.project-lead-header {
+    grid-column: 1 / -1;
+    min-width: 0;
+}
+
+.project-lead-header .page-intro--project {
+    margin-bottom: 0;
+}
+
+.project-figure--logo-inline {
+    flex: 0 0 auto;
+    width: clamp(84px, 10vw, 118px);
+    margin: 0;
+}
+
 .skill-columns {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 2rem 2.5rem;
@@ -901,6 +933,15 @@ strong {
     color: var(--text-soft);
 }
 
+.project-page p,
+.project-page li,
+.credit-group p,
+.brand,
+.nav-links a,
+.footer-links a {
+    overflow-wrap: anywhere;
+}
+
 .project-page a {
     color: var(--accent) !important;
 }
@@ -918,9 +959,12 @@ strong {
 }
 
 .project-desc-section--lead {
-    grid-template-columns: minmax(0, 1.3fr) minmax(320px, 460px);
-    gap: 3rem;
-    align-items: stretch;
+    grid-template-columns: minmax(0, 1.1fr) minmax(280px, 420px);
+    grid-template-areas:
+        "header header"
+        "copy media";
+    gap: 2rem 3rem;
+    align-items: start;
 }
 
 .project-desc-right {
@@ -938,6 +982,15 @@ strong {
 
 .project-desc-text {
     min-width: 0;
+}
+
+.project-desc-section--lead .project-lead-header {
+    grid-area: header;
+}
+
+.project-desc-section--lead .project-desc-text {
+    grid-area: copy;
+    align-self: center;
 }
 
 .project-desc-img,
@@ -959,14 +1012,17 @@ strong {
 }
 
 .project-desc-img-group--lead {
-    justify-self: end;
+    grid-area: media;
+    justify-self: center;
+    align-self: center;
     width: 100%;
-    max-width: 460px;
-    height: 100%;
-    min-height: 100%;
-    align-content: stretch;
-    justify-content: space-between;
-    gap: 0;
+    max-width: 420px;
+    height: auto;
+    min-height: 0;
+    align-content: start;
+    justify-content: start;
+    gap: 1rem;
+    margin-top: 0.75rem;
 }
 
 .project-figure {
@@ -982,6 +1038,7 @@ strong {
 
 .project-figure--team {
     width: 100%;
+    justify-items: center;
 }
 
 .project-figure--team .photo-caption {
@@ -1233,6 +1290,23 @@ strong {
         justify-self: start;
     }
 
+    .project-desc-section--lead {
+        grid-template-areas:
+            "header"
+            "copy"
+            "media";
+        gap: 1.75rem;
+    }
+
+    .project-desc-img-group--lead {
+        justify-self: start;
+        max-width: min(100%, 34rem);
+    }
+
+    .project-copy {
+        max-width: none;
+    }
+
     .doc-image-group {
         grid-template-columns: minmax(0, 1fr);
     }
@@ -1255,10 +1329,22 @@ strong {
         padding: 0.85rem 0;
     }
 
+    .brand {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
     .nav-links {
         margin-left: 0;
         justify-content: center;
         width: 100%;
+        gap: 0.9rem;
+    }
+
+    .nav-resume {
+        width: 100%;
+        max-width: 14rem;
     }
 
     .footer-inner {
@@ -1266,9 +1352,68 @@ strong {
         text-align: center;
     }
 
+    .footer-links {
+        justify-content: center;
+    }
+
     .hero-name,
     .page-intro h1 {
         font-size: clamp(2rem, 10vw, 3rem);
+    }
+
+    .project-entry {
+        gap: 1.25rem;
+    }
+
+    .project-entry__title-row {
+        align-items: flex-start;
+    }
+
+    .project-status {
+        width: 100%;
+    }
+
+    .project-links .button,
+    .project-links .button--secondary {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .project-page {
+        padding-top: 1.5rem;
+    }
+
+    .award-title-lockup {
+        display: block;
+        max-width: 100%;
+    }
+
+    .award-title-lockup .award-title {
+        font-size: clamp(1.85rem, 9vw, 2.7rem);
+        line-height: 1.05;
+        max-width: 100%;
+    }
+
+    .project-figure--logo-inline {
+        width: clamp(58px, 20vw, 82px);
+        margin: 0.7rem 0 0 auto;
+    }
+
+    .project-desc-section--lead {
+        gap: 1.35rem;
+    }
+
+    .project-lead-header,
+    .page-intro--project,
+    .project-desc-text,
+    .project-copy {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .project-desc-img-group--lead {
+        max-width: none;
     }
 
     .desc-section,
