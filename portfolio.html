@@ -3,134 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio – Camren Khoury</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="description" content="Engineering projects and technical documentation by Camren Khoury.">
+    <meta name="theme-color" content="#0f1117">
+    <title>Projects | Camren Khoury</title>
+    <link rel="stylesheet" href="css/style.css?v=5">
+    <script defer src="js/site.js"></script>
 </head>
-
 <body>
 
-    <!-- ================= HEADER ================= -->
-    <header class="site-header">
-        <nav class="nav-container">
-            <div class="nav-logo">
-                <a href="/">CAMREN J KHOURY</a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="about.html">About</a></li>
-                <li><a href="portfolio.html" class="active">Portfolio</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="/docs/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
-            </ul>
-        </nav>
-    </header>
+<header class="site-header">
+    <nav class="nav-container">
+        <a class="brand" href="index.html">
+            Camren J. Khoury
+            <span>Electrical + Computer Engineering</span>
+        </a>
 
-    <!-- ================= HERO ================= -->
-    <section class="hero hero-about">
-        <div class="hero-content">
-            <h1>Portfolio</h1>
-            <p>A collection of engineering projects, systems, and technical documentation.</p>
+        <ul class="nav-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html" aria-current="page">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <a class="nav-resume" href="docs/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+    </nav>
+</header>
+
+<main>
+    <section class="page-hero">
+        <div class="section-wrapper">
+            <div class="page-intro">
+                <p class="eyebrow">Projects</p>
+                <h1>Engineering projects and documentation</h1>
+                <p class="section-intro">Selected work in embedded systems, PCB design, computer vision, control, and distributed systems.</p>
+            </div>
         </div>
     </section>
 
+    <section class="section-block">
+        <div class="section-wrapper">
+            <div class="project-list">
+                <article class="project-entry">
+                    <div class="project-entry__media">
+                        <img src="images/drosophila.png" alt="Automated Drosophila sorting project image" loading="eager">
+                    </div>
+                    <div class="project-entry__body">
+                        <div class="project-entry__title-row">
+                            <h2 class="award-title">Award-Winning: Automated Drosophila Sorting System</h2>
+                            <span class="project-status">Completed</span>
+                        </div>
+                        <p>
+                            Built for Clemson University Institute for Human Genetics. A trained AI model
+                            classifies sex and visible damage while the system sorts and records analytics on a
+                            Raspberry Pi 5.
+                        </p>
+                        <div class="project-details">
+                            <p><strong>My role:</strong> PCB integration, Raspberry Pi setup, remote control, motor control, GUI work, and shared software development.</p>
+                            <p><strong>Highlight:</strong> People's Choice Award, Senior Design II Showcase, April 23, 2026.</p>
+                        </div>
+                        <div class="project-links">
+                            <a class="button button--secondary" href="project-pages/drosophila-sorting-system.html">Project Page</a>
+                        </div>
+                    </div>
+                </article>
 
-	<!-- ================= PROJECTS SECTION ================= -->
-	<section class="section-wrapper">
-		<h2 class="section-title">Featured Projects</h2>
+                <article class="project-entry project-entry--reverse">
+                    <div class="project-entry__media">
+                        <img src="images/water-quality-sensor.png" alt="Water quality sensor system illustration" loading="lazy">
+                    </div>
+                    <div class="project-entry__body">
+                        <div class="project-entry__title-row">
+                            <h2>Remote Water Quality Monitoring System</h2>
+                            <span class="project-status">Active</span>
+                        </div>
+                        <p>Low-cost sensing platform for continuous water monitoring in resource-limited environments.</p>
+                        <div class="project-details">
+                            <div><strong>My work:</strong> project lead for early planning, literature review, documentation, and dashboard coordination.</div>
+                            <div><strong>Hardware / software:</strong> ESP32-based system direction, custom PCB planning, and multi-sensor architecture for pH, turbidity, conductivity, ORP, and temperature.</div>
+                            <div><strong>Status:</strong> active. Current design targets a projected 60-80% cost reduction against comparable commercial systems.</div>
+                        </div>
+                        <div class="project-links">
+                            <a class="button button--secondary" href="project-pages/water-quality-sensor.html">Current Progress</a>
+                        </div>
+                    </div>
+                </article>
 
-		<div class="projects-grid">
-			
-			<div class="project-card">
-				<span class="featured-star" aria-label="Featured project">★</span>
-				<img src="images/esp32.png" class="project-img" alt="ESP32 WROOM">
-				<h3>Microcontroller-Based Water Quality Sensor System</h3>
-				<a href="project-pages/water-quality-sensor.html" class="card-button">Current Progress</a>
-			</div>
-			
-			<div class="project-card">
-				<span class="featured-star" aria-label="Featured project">★</span>
-				<img src="images/drosophila.png" class="project-img" alt="Drosophila Project">
-				<h3>Genetics: Drosophila Identification and Sorting Project</h3>
-				<a href="project-pages/drosophila.html" class="card-button disabled">In Progress</a>
-			</div>
-			
-			<div class="project-card">
-				<span class="featured-star" aria-label="Featured project">★</span>
-				<img src="images/shark_padded.png" class="project-img" alt="PoolShark Project">
-				<h3>PoolShark: Automated Computer Vision & Motor Control System</h3>
-				<a href="project-pages/poolshark.html" class="card-button">View Documentation</a>
-			</div>
+                <article class="project-entry">
+                    <div class="project-entry__media">
+                        <img src="images/shark_padded.png" alt="PoolShark project image" loading="lazy">
+                    </div>
+                    <div class="project-entry__body">
+                        <div class="project-entry__title-row">
+                            <h2>PoolShark: Automated Computer Vision &amp; Motor Control System</h2>
+                            <span class="project-status">Completed</span>
+                        </div>
+                        <p>Automated mini-billiards system that detected ball positions, computed shot geometry, and drove the hardware needed to execute the shot.</p>
+                        <div class="project-details">
+                            <div><strong>My work:</strong> MATLAB interface work, computer-vision pipeline development, and control integration.</div>
+                            <div><strong>Hardware / software:</strong> homography, HSV detection, morphology, Arduino Mega, Simulink, and PID-based motor control.</div>
+                            <div><strong>Status:</strong> completed automated detection, aiming, and shot execution on the table hardware.</div>
+                        </div>
+                        <div class="project-links">
+                            <a class="button button--secondary" href="project-pages/poolshark.html">View Documentation</a>
+                            <a class="text-link" href="docs/Final_Report__Group_16___ECE_4950___Fall_2025.pdf" target="_blank" rel="noopener noreferrer">Final Report</a>
+                        </div>
+                    </div>
+                </article>
 
-		</div>
-	</section>
+                <article class="project-entry project-entry--reverse">
+                    <div class="project-entry__media">
+                        <img src="images/PLC-Lab-Photo.png" alt="PLC automation lab image" loading="lazy">
+                    </div>
+                    <div class="project-entry__body">
+                        <div class="project-entry__title-row">
+                            <h2>PLC Automation (ICS/DCS/HMI)</h2>
+                            <span class="project-status">In Progress</span>
+                        </div>
+                        <p>Industrial control work centered on PLC logic, HMI structure, and automation-focused lab systems.</p>
+                        <div class="project-details">
+                            <div><strong>My work:</strong> control logic, sequencing, and operator interaction flow.</div>
+                            <div><strong>Hardware / software:</strong> PLC programming and HMI structure.</div>
+                            <div><strong>Status:</strong> writeup still in progress.</div>
+                        </div>
+                    </div>
+                </article>
 
-	<!-- ================= SMALL PROJECTS SECTION ================= -->
-	<section class="section-wrapper">
-		<h2 class="section-title">Additional Projects</h2>
+                <article class="project-entry">
+                    <div class="project-entry__media">
+                        <img src="images/picluster4.png" alt="Raspberry Pi cluster" loading="lazy">
+                    </div>
+                    <div class="project-entry__body">
+                        <div class="project-entry__title-row">
+                            <h2>High Performance Computing</h2>
+                            <span class="project-status">Completed</span>
+                        </div>
+                        <p>Four-node Raspberry Pi cluster for distributed compute, shared storage, and parallel benchmarking.</p>
+                        <div class="project-details">
+                            <div><strong>My work:</strong> static networking, SSH automation, NFS setup, MPI configuration, and benchmark setup.</div>
+                            <div><strong>Hardware / software:</strong> Raspberry Pi nodes, Linux, Ethernet switching, MPI, NFS, and HPL.</div>
+                            <div><strong>Status:</strong> completed for semester work and the 2025 SBCC Small-Board Cluster Competition.</div>
+                        </div>
+                        <div class="project-links">
+                            <a class="button button--secondary" href="project-pages/hpc-computing.html">View Documentation</a>
+                            <a class="text-link" href="docs/HPC_Semester_Overview.pdf" target="_blank" rel="noopener noreferrer">Semester Summary</a>
+                        </div>
+                    </div>
+                </article>
 
-		<div class="projects-grid">
+                <article class="project-entry project-entry--reverse">
+                    <div class="project-entry__media">
+                        <img src="images/pynq-z2.png" alt="Pynq-Z2 FPGA board" loading="lazy">
+                    </div>
+                    <div class="project-entry__body">
+                        <div class="project-entry__title-row">
+                            <h2>FPGA and Digital Systems</h2>
+                            <span class="project-status">Writeup In Progress</span>
+                        </div>
+                        <p>Digital design work using programmable logic, Verilog modules, testbenches, and FPGA development tools.</p>
+                        <div class="project-details">
+                            <div><strong>My work:</strong> Verilog modules, ALU and processor work, testbenches, and board-level FPGA exercises.</div>
+                            <div><strong>Hardware / software:</strong> Pynq-Z2, Verilog, Vivado, and Vitis.</div>
+                            <div><strong>Status:</strong> page still being expanded.</div>
+                        </div>
+                        <div class="project-links">
+                            <a class="button button--secondary" href="project-pages/fpga-digital-systems.html">Project Page</a>
+                        </div>
+                    </div>
+                </article>
 
-			<div class="project-card">
-				<img src="images/PLC-Lab-Photo.png" class="project-img" alt="PLC Automation Lab">
-				<h3>PLC Automation (ICS/DCS/HMI)</h3>
-				<a href="project-pages/plc-automation.html" class="card-button disabled">In Progress</a>
-			</div>
-			
-			<div class="project-card">
-				<img src="images/picluster4.png" class="project-img" alt="Pi Cluster">
-				<h3>High Performance Computing</h3>
-				<a href="project-pages/hpc-computing.html" class="card-button">View Documentation</a>
-			</div>
-			
-			<div class="project-card">
-				<img src="images/structures.png" class="project-img" alt="Data Structure Image">
-				<h3>Data Structures and Algorithms</h3>
-				<a href="project-pages/data-structures.html" class="card-button disabled">Coming Soon</a>
-			</div>
+                <article class="project-entry">
+                    <div class="project-entry__media">
+                        <img src="images/structures.png" alt="Data structures illustration" loading="lazy">
+                    </div>
+                    <div class="project-entry__body">
+                        <div class="project-entry__title-row">
+                            <h2>Data Structures and Algorithms</h2>
+                            <span class="project-status">Writeup In Progress</span>
+                        </div>
+                        <p>Coursework and implementation work centered on memory-managed data structures, algorithms, and debugging.</p>
+                        <div class="project-details">
+                            <div><strong>My work:</strong> linked structures, trees, stacks, queues, and algorithm-heavy coding assignments.</div>
+                            <div><strong>Hardware / software:</strong> low-level programming, memory management, algorithm analysis, and debugging.</div>
+                            <div><strong>Status:</strong> page content still being expanded.</div>
+                        </div>
+                        <div class="project-links">
+                            <a class="button button--secondary" href="project-pages/data-structures.html">Project Page</a>
+                        </div>
+                    </div>
+                </article>
 
-		</div>
-	</section>
-
-    <!-- ================= PROFILES (GitHub, LC, LinkedIn) ================= -->
-    <section class="section-wrapper">
-        <h2 class="section-title">Profiles</h2>
-
-        <div class="card-grid">
-
-            <div class="info-card">
-                <img src="images/gitlogo.png" class="profile-logo" alt="GitHub Logo">
-                <h3>GitHub</h3>
-                <a href="https://github.com/camrenkhoury" target="_blank" class="card-button">View Profile</a>
             </div>
-
-            <div class="info-card">
-                <img src="images/leetlogo.png" class="profile-logo" alt="LeetCode Logo">
-                <h3>LeetCode</h3>
-                <a href="https://leetcode.com/u/camrenkhoury/" target="_blank" class="card-button">View Profile</a>
-            </div>
-
-            <div class="info-card">
-                <img src="images/LinkedInLogo.png" class="profile-logo" alt="LinkedIn Logo">
-                <h3>LinkedIn</h3>
-            <a href="https://www.linkedin.com/in/camren-khoury-404655226/" target="_blank" class="card-button">View Profile</a>
-        </div>
-
-<!---
-            <div class="info-card">
-                <img src="images/youtubelogo.png" class="profile-logo" alt="YouTube Logo">
-                <h3>YouTube</h3>
-                <a href="#" class="card-button disabled">Coming Soon</a>
-            </div>
-
-        -->
-
         </div>
     </section>
+</main>
 
-
-    <!-- ================= FOOTER ================= -->
-    <footer class="site-footer">
-        <p>© 2026 Camren Khoury</p>
-    </footer>
+<footer class="site-footer">
+    <div class="footer-inner">
+        <p>&copy; <span data-current-year>2026</span> Camren Khoury</p>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="docs/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+        </div>
+    </div>
+</footer>
 
 </body>
 </html>

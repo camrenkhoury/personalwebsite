@@ -3,162 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About – Camren Khoury</title>
-	<link rel="stylesheet" href="css/style.css?v=2">
+    <meta name="description" content="About Camren Khoury, an Electrical and Computer Engineering student at Clemson University.">
+    <meta name="theme-color" content="#0f1117">
+    <title>About | Camren Khoury</title>
+    <link rel="stylesheet" href="css/style.css?v=5">
+    <script defer src="js/site.js"></script>
 </head>
 <body>
 
-    <!-- NAVIGATION -->
-    <header class="site-header">
-        <nav class="nav-container">
-            <div class="nav-logo">
-                <a href="/">CAMREN J KHOURY</a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="about.html" class="active">About</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="/docs/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
-            </ul>
-        </nav>
-    </header>
+<header class="site-header">
+    <nav class="nav-container">
+        <a class="brand" href="index.html">
+            Camren J. Khoury
+            <span>Electrical + Computer Engineering</span>
+        </a>
 
-    <!-- ================= ABOUT INFO ================= -->
-<section id="about-info">
-    <div class="about-flex">
+        <ul class="nav-links">
+            <li><a href="about.html" aria-current="page">About</a></li>
+            <li><a href="portfolio.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
 
-        <!-- LEFT: TEXT CONTENT -->
-        <div class="about-text">
+        <a class="nav-resume" href="docs/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+    </nav>
+</header>
 
-            <!-- ===== FIRST BLOCK: IMAGE ON RIGHT ===== -->
-            <div class="desc-section desc-left">
-                <div class="desc-text">
-				     <h1>My Background</h1>
-					 <p>I’m <strong>Camren Khoury</strong>, a student at 
-						<strong>Clemson University</strong> majoring in 
-						<strong>Computer Engineering</strong> and 
-						<strong>Electrical Engineering</strong> graduating in May 2026.
-					</p>
-                    <p>
-                        I am from <strong>North Charleston, South Carolina</strong>. I always had a deep 
-                        interest in how technology works at its core, especially the way binary logic, 
-                        circuits, and small changes in hardware or software can completely change a system's 
-                        behavior. Early projects like building my own computer and repairing electronics 
-                        strengthened my interest in engineering and pushed me toward a hands-on career.
+<main>
+    <section class="page-hero">
+        <div class="section-wrapper">
+            <div class="about-layout">
+                <div class="page-intro">
+                    <p class="eyebrow">About</p>
+                    <h1>Computer Engineering + Electrical Engineering</h1>
+                    <p class="section-intro">
+                        I am a Clemson University student graduating in May 2026 with B.S. degrees in Computer
+                        Engineering and Electrical Engineering. My work is centered on embedded systems, PCB
+                        design, computer vision, control, and hardware/software integration.
                     </p>
-					
-					 <p>
-						I chose to get a degree in both Computer Engineering and Electrical Engineering because
-						I wanted a complete understanding of both hardware and software. Computer Engineering 
-						provides the middle ground between electronics and computer science, but taking additional 
-						EE-exclusive courses such as electromagnetics, electronics, and power systems allows me to 
-						understand how the systems I design work from the physical level up through embedded 
-						software. This broader perspective helps me design solutions that are more reliable and 
-						realistic.
-					</p>
-                </div>
-
-                <div class="desc-img">
-                    <img src="images/PersonalPhoto.jpg" alt="Camren">
-                    <p class="photo-caption">Camren John Khoury</p>
-                </div>
-            </div>
-
-            <!-- ===== SECOND BLOCK: IMAGE ON LEFT ===== -->
-            <div class="desc-section desc-left">
-                <div class="desc-text">
-					<h1>My Family</h1>
-                    <p>
-                        My partner <strong>Cadle</strong>, who is studying Elementary Education at 
-                        <strong>Augusta University</strong>, and our daughter <strong>Delilah</strong> inspire me 
-                        to approach engineering with purpose, discipline, and long-term vision. Balancing 
-                        academics, leadership roles, and fatherhood has shaped my resilience and the way I 
-                        approach challenges. 
+                    <p class="section-intro">
+                        Most of what I enjoy building sits across the boundary between software and electronics:
+                        Raspberry Pi and microcontroller-based systems, custom boards in KiCad, motion and
+                        sensor integration, and the debugging required to make the whole system operate
+                        reliably.
                     </p>
-					
-					<p>
-						I also have three sisters and a brother, all of whom currently live on the East Coast of the United States. 
-						I am the second oldest on my father's side of the family and the oldest on my mother's side. Growing up, 
-						I lived with my grandparents: my grandmother, Rosa, who played a huge role in my development as an adult, 
-						and my grandfather, Donald, who graduated in 1958 with a degree in Electrical Engineering from Michigan State University 
-						and later pursued a long, successful career with SPAWAR in North Charleston, SC.
-					</p>
                 </div>
 
-                <div class="desc-img">
-                    <img src="images/cadleanddeli.JPG" alt="Cadle & Delilah">
-                    <p class="photo-caption">Cadle and Delilah</p>
+                <div class="photo-frame">
+                    <img src="images/PersonalPhoto.jpg" alt="Camren Khoury portrait" loading="eager">
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- ===== CONTINUATION PARAGRAPH ===== -->
+    <section class="section-block">
+        <div class="section-wrapper">
+            <div class="about-story-layout">
+                <div class="about-story-copy">
+                    <section class="summary-panel">
+                        <p class="eyebrow">About Me</p>
+                        <p>
+                            I am from North Charleston, South Carolina. Early on, building computers and repairing
+                            electronics pushed me toward engineering because I liked understanding why a system
+                            worked, failed, or behaved unexpectedly at the hardware level.
+                        </p>
+                        <p>
+                            That interest grew into project work around microcontrollers, circuit behavior, PCB
+                            layout, computer vision, distributed systems, and projects that demand coordination
+                            between hardware and software.
+                        </p>
+                    </section>
 
-            <h2>Academic Journey</h2>
+                    <section class="summary-panel">
+                        <p class="eyebrow">Beyond Engineering</p>
+                        <p>
+                            Family is a big part of how I think about work. Cadle and Delilah keep my priorities
+                            grounded and shape how I think about discipline, ownership, and long-term direction.
+                        </p>
+                        <p>
+                            Outside engineering I spend time swimming, training, playing basketball, and being with
+                            family.
+                        </p>
+                    </section>
+                </div>
 
-            <p>
-                During my time at Clemson, I have grown my skills in several course areas including 
-                data structures, algorithms, electronics, and microcontroller systems. Highlights include:
-            </p>
+                <div class="about-story-photo">
+                    <div class="about-family-photos">
+                        <figure class="about-photo-card">
+                            <img src="images/cadleanddeli.JPG" alt="Cadle holding Delilah">
+                            <figcaption class="photo-caption">Cadle and Delilah</figcaption>
+                        </figure>
+                        <figure class="about-photo-card">
+                            <img src="images/familyphoto.JPG" alt="Camren, Cadle, and Delilah">
+                            <figcaption class="photo-caption">Family Photo</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <ul>
-                <li><strong>Data Structures and Algorithms</strong>: Building and debugging linked lists, heaps, and memory systems.</li>
-                <li><strong>Electronics and Circuit Design</strong>: Hands-on labs with transistors, oscilloscopes, and curve tracers.</li>
-                            <li><strong>Embedded Systems</strong>: PIC32-based projects including a Nuclear Meltdown Simulation. ESP32 projects like the WQSP (see projects)</li>
-                <li><strong>Integrated System Design</strong>: Combining multiple elements of different systems safely and accurately like the PoolShark (see projects)</li>
-                <li><strong>FPGA/SOC Design</strong>: Basic FPGA/SOC Design using Verilog and AMD Vitis + Vivado</li>
-            </ul>
+    <section class="section-block">
+        <div class="section-wrapper">
+            <div class="section-heading">
+                <p class="eyebrow">Technical Focus</p>
+                <h2 class="section-title">Tools and areas I use most across class and project work.</h2>
+            </div>
 
-            <p>
-                I am proficient in <strong>C</strong>, <strong>Python</strong>, and <strong>Verilog</strong> with experience in 
-                <strong>Swift</strong> and development on <strong>PIC32</strong>, <strong>ESP32</strong>, and 
-                <strong>STM32</strong> platforms.
-            </p>
+            <div class="skill-columns">
+                <section class="skill-group">
+                    <h3>Embedded / Hardware</h3>
+                    <ul>
+                        <li>Raspberry Pi, ESP32, STM32, GPIO, PWM, ADC, UART, I2C, and SPI</li>
+                        <li>Sensor integration, motor control, hardware bring-up, and bench debugging</li>
+                        <li>Board-level assembly, soldering, and full-system integration</li>
+                    </ul>
+                </section>
 
-            <h2>Career Goals</h2>
+                <section class="skill-group">
+                    <h3>PCB Design</h3>
+                    <ul>
+                        <li>KiCad, 2-layer and multi-layer routing, DRC, and Gerber generation</li>
+                        <li>Power distribution, grounding, motor-driver support, and connector planning</li>
+                        <li>Fabrication handoff, board assembly, and rework</li>
+                    </ul>
+                </section>
 
-            <p>
-                I aim to work in a field like <strong>embedded systems</strong>, <strong>FPGA Design</strong>, or <strong>Intelligent Systems</strong>
-				to work on hardware implementation designs focusing on seamless hardware/software integration. These fields would
-				also work in connecting with memory management and system optimization which is something I also find interesting to optimize.
-            </p>
+                <section class="skill-group">
+                    <h3>Software / Programming</h3>
+                    <ul>
+                        <li>C, C++, Python, MATLAB, JavaScript, SQL, and Verilog</li>
+                        <li>OpenCV, YOLO, segmentation, edge detection, and vision pipeline work</li>
+                        <li>Control logic, automation scripts, and debugging across shared codebases</li>
+                    </ul>
+                </section>
 
-            <p>My areas of interest include:</p>
+                <section class="skill-group">
+                    <h3>Tools / Systems</h3>
+                    <ul>
+                        <li>Linux, Git/GitHub, SSH, MPI, NFS, LTSpice, and Simulink</li>
+                        <li>Vivado, Vitis, MATLAB App Designer, PLCs, and ladder logic</li>
+                        <li>Hardware/software integration under real timing, control, and reliability constraints</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </section>
+</main>
 
-            <ul>
-				<li><strong>Embedded Systems Development</strong>: Designing microcontroller-based solutions for healthcare, automation, and consumer devices.</li>
-
-				<li><strong>FPGA & Digital Design</strong>: Developing hardware-accelerated systems and custom SoC-style architectures for high-performance applications.</li>
-
-                <li><strong>Intelligent Systems</strong>: Applying Computer Vision, Control Systems, and Embedded Intelligence to drive automated decision-making and system control.</li>
-                
-				<li><strong>Software Engineering</strong>: Building dependable, low-level software using C and related system-level languages.</li>
-            
-            	<li><strong>System Optimization</strong>: Enhancing reliability, efficiency, and overall performance across hardware/software systems.</li>
-
-            </ul>
-
-            <h2>Personal Interests</h2>
-
-            <p>
-                Outside engineering, I enjoy the <strong>gym</strong>, <strong>swimming</strong>,
-                <strong>basketball</strong>, and spending time with my family.
-            </p>
-
-            <p>
-                If you’d like to learn more, visit my 
-                <a href="portfolio.html">portfolio</a> or 
-                <a href="contact.html">contact me</a>.
-            </p>
-
-        </div> <!-- end about-text -->
-
-    </div> <!-- end about-flex -->
-</section>
-
-
-    <footer class="site-footer">
-        <p>© 2026 Camren Khoury</p>
-    </footer>
+<footer class="site-footer">
+    <div class="footer-inner">
+        <p>&copy; <span data-current-year>2026</span> Camren Khoury</p>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="portfolio.html">Projects</a>
+            <a href="contact.html">Contact</a>
+            <a href="docs/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+        </div>
+    </div>
+</footer>
 
 </body>
 </html>
