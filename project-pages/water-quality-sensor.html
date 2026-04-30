@@ -6,7 +6,7 @@
     <meta name="description" content="Final Spring 2026 overview of the Remote Water Quality Monitoring System founded and led by Camren Khoury.">
     <meta name="theme-color" content="#0f1117">
     <title>Remote Water Quality Monitoring System - Camren Khoury</title>
-    <link rel="stylesheet" href="../css/style.css?v=9">
+    <link rel="stylesheet" href="../css/style.css?v=10">
     <script defer src="../js/site.js"></script>
 </head>
 <body>
@@ -360,46 +360,45 @@
         <div class="sensor-grid">
             <article class="sensor-card">
                 <h3>Temperature</h3>
-                <img src="../images/Temperature Sensor.jpg" alt="Waterproof 1-Wire DS18B20 digital temperature sensor">
+                <img src="../images/wqsp-sensor-temperature.jpg" alt="Waterproof 1-Wire DS18B20 digital temperature sensor">
                 <p class="sensor-model">Waterproof DS18B20 digital temperature sensor</p>
                 <p>Provides environmental context for readings.</p>
             </article>
             <article class="sensor-card">
                 <h3>TDS / Conductivity</h3>
-                <img src="../images/Electrical Conductivity Sensor.png" alt="Gravity lab grade analog electrical conductivity sensor kit">
+                <img src="../images/wqsp-sensor-ec.png" alt="Gravity lab grade analog electrical conductivity sensor kit">
                 <p class="sensor-model">Gravity analog electrical conductivity sensor kit</p>
                 <p>Tracks dissolved solids and ionic-content trends.</p>
             </article>
             <article class="sensor-card">
                 <h3>Flow Rate</h3>
-                <img src="../images/Flow-Rate Sensor.png" alt="Gravity water flow sensor">
+                <img src="../images/wqsp-sensor-flow.jpg" alt="Gravity water flow sensor">
                 <p class="sensor-model">Gravity water flow sensor</p>
                 <p>Confirms movement through the test path.</p>
             </article>
             <article class="sensor-card">
                 <h3>ORP</h3>
-                <img src="../images/Industrial ORP Sensor.png" alt="Gravity analog industrial ORP sensor meter pro">
+                <img src="../images/wqsp-sensor-orp.jpg" alt="Gravity analog industrial ORP sensor meter pro">
                 <p class="sensor-model">Gravity analog industrial ORP sensor meter pro</p>
                 <p>Tracks oxidation-reduction behavior.</p>
             </article>
             <article class="sensor-card">
                 <h3>pH</h3>
-                <img src="../images/pH Sensor.jpg" alt="Gravity lab grade analog pH sensor kit for Arduino">
+                <img src="../images/wqsp-sensor-ph.jpg" alt="Gravity lab grade analog pH sensor kit for Arduino">
                 <p class="sensor-model">Gravity analog pH sensor kit</p>
                 <p>Tracks acidity and basicity shifts.</p>
             </article>
             <article class="sensor-card">
                 <h3>Turbidity</h3>
-                <img src="../images/Turbidity Sensor.jpg" alt="DFRobot analog turbidity sensor">
+                <img src="../images/wqsp-sensor-turbidity.jpg" alt="DFRobot analog turbidity sensor">
                 <p class="sensor-model">DFRobot analog turbidity sensor</p>
                 <p>Tracks suspended particles and clarity changes.</p>
             </article>
         </div>
-        <figure class="project-wide-image">
-            <img src="../images/water_quality_table_centered.png" alt="Water quality sensor decision matrix">
+        <figure class="project-wide-image project-wide-image--diagram">
+            <img src="../images/water_quality_table_centered.png" alt="Water quality sensor selection decision matrix">
             <figcaption class="photo-caption">Water-quality sensor selection decision matrix.</figcaption>
         </figure>
-
         <hr class="white-divider">
 
         <!-- PCB Development -->
@@ -430,21 +429,15 @@
                     materials, and testing resources were available.
                 </p>
             </div>
-            <div class="project-desc-img-group media-main-plus-two pcb-media-stack section-media">
+            <div class="project-desc-img-group pcb-media-stack section-media">
                 <figure class="media-card main-media">
-                    <img src="../images/ESP32-WROOM-32UE-(16MB)_sml.webp" alt="ESP32-WROOM-32UE-N16 module">
-                    <figcaption class="photo-caption">ESP32 module.</figcaption>
+                    <img class="pcb-breakout-flat-img" src="../images/wqsp-pcb-breakout-board.png" alt="ESP32 breakout board flat view">
+                    <figcaption class="photo-caption">ESP32 breakout board flat layout.</figcaption>
                 </figure>
-                <div class="secondary-media">
-                    <figure class="media-card">
-                        <img class="pcb-detail-img" src="../images/wqsp-pcb-breakout-board.png" alt="ESP32 breakout board flat view">
-                        <figcaption class="photo-caption">ESP32 breakout board flat layout.</figcaption>
-                    </figure>
-                    <figure class="media-card">
-                        <img class="pcb-detail-img pcb-detail-img--3d" src="../images/wqsp-pcb-breakout-board-3d.png" alt="ESP32 breakout board 3D render">
-                        <figcaption class="photo-caption">ESP32 breakout board 3D render.</figcaption>
-                    </figure>
-                </div>
+                <figure class="media-card">
+                    <img class="pcb-breakout-render-img" src="../images/wqsp-pcb-breakout-board-3d.png" alt="ESP32 breakout board 3D render">
+                    <figcaption class="photo-caption">ESP32 breakout board 3D render.</figcaption>
+                </figure>
             </div>
         </div>
 

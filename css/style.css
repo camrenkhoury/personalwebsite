@@ -1554,6 +1554,27 @@ strong {
     max-height: 245px;
 }
 
+.pcb-media-stack {
+    width: 100%;
+    gap: 0.95rem;
+}
+
+.pcb-media-stack .media-card {
+    width: 100%;
+}
+
+.pcb-breakout-flat-img {
+    width: 100%;
+    max-height: 230px;
+    object-fit: contain;
+}
+
+.pcb-breakout-render-img {
+    width: 100%;
+    max-height: 285px;
+    object-fit: contain;
+}
+
 .networking-diagram-large {
     max-height: 520px;
 }
