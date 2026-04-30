@@ -1500,6 +1500,14 @@ strong {
     margin: 0 auto;
 }
 
+.section-poster-img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
 .media-card .poster-img,
 .project-wide-image--tight .poster-img {
     max-height: 460px;

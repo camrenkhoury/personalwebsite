@@ -6,7 +6,7 @@
     <meta name="description" content="Final Spring 2026 overview of the Remote Water Quality Monitoring System founded and led by Camren Khoury.">
     <meta name="theme-color" content="#0f1117">
     <title>Remote Water Quality Monitoring System - Camren Khoury</title>
-    <link rel="stylesheet" href="../css/style.css?v=10">
+    <link rel="stylesheet" href="../css/style.css?v=11">
     <script defer src="../js/site.js"></script>
 </head>
 <body>
@@ -339,16 +339,18 @@
                     grounding strategy, breakout-board development, optional Raspberry Pi uplink
                     support, and early enclosure planning.
                 </p>
+                <p>
+                    <a class="poster-button" href="../docs/wqsp-summit-poster.pdf" target="_blank" rel="noopener noreferrer">Open WQSP Poster PDF</a>
+                </p>
             </div>
             <div class="project-desc-img-group media-stack section-media">
                 <figure class="media-card">
-                    <img class="poster-img" src="../images/wqsp-summit-poster.png" alt="Remote Water Sensor poster">
-                    <figcaption class="photo-caption">Remote Water Sensor poster.</figcaption>
-                    <a class="poster-button" href="../docs/wqsp-summit-poster.pdf" target="_blank" rel="noopener noreferrer">Open Poster PDF</a>
-                </figure>
-                <figure class="media-card">
                     <img class="diagram-img" src="../images/wqsp-high-level-implementation.png" alt="WQSP high-level implementation diagram">
                     <figcaption class="photo-caption">High-level WQSP implementation diagram.</figcaption>
+                </figure>
+                <figure class="media-card">
+                    <img class="section-poster-img" src="../images/wqsp-summit-poster.png" alt="Remote Water Sensor poster">
+                    <figcaption class="photo-caption">Remote Water Sensor poster.</figcaption>
                 </figure>
             </div>
         </div>
@@ -443,32 +445,34 @@
 
         <hr class="white-divider">
 
-        <!-- Data Visualization and Dashboard -->
-        <h2 class="section-title">Data Visualization and Dashboard</h2>
+        <!-- Data Visualization -->
+        <h2 class="section-title">Data Visualization</h2>
         <div class="project-desc-section project-desc-left">
             <div class="project-desc-text">
                 <p>
-                    Alongside the physical sensor-node work, the Data Visualization team developed
-                    the software and communication side of the system. Since live sensor readings
-                    were not available yet, the dashboard used simulated water-quality data to
-                    build and test the front-end layout, trend visualization, warning logic, and
-                    user interaction flow.
+                    Alongside the physical sensor-node development, the Data Visualization team focused on building the software, communication, and user-facing components of the system. Because live sensor data was not yet available during development, the dashboard was designed and tested using simulated water-quality data. This allowed the team to validate front-end layout decisions, real-time trend visualization, alert logic, and overall user interaction flow before hardware deployment.
                 </p>
                 <p>
-                The project also explored a tiered networking model because deployment
-                environments may not have the same internet reliability, power access, or local
-                computing resources. The concept separated deployments into high-, moderate-,
-                and minimal-reliability tiers so the system could adapt to the needs of the
-                community instead of depending on one fixed infrastructure assumption.
+                    The dashboard was built using a JavaScript, HTML, and CSS stack, with Chart.js used for real-time data visualization and dynamic graphing. A Supabase backend was integrated to simulate a cloud-based data source, enabling structured storage and retrieval of sensor readings. The frontend continuously polls this backend, processes incoming data, and updates both numerical displays and time-series charts to mimic real-world streaming conditions.
+                </p>
+                <p>
+                    Beyond simple visualization, the system implements baseline tracking and threshold-based classification to detect meaningful changes in water conditions. Sensor values such as pH, turbidity, temperature, TDS, and conductivity are compared against rolling averages, allowing the system to classify increases, decreases, or stable conditions. These classifications feed into a rule-based alert system that identifies patterns such as contamination risk, temperature-driven decay, or source changes, and presents them clearly to the user through a tiered alert interface.
+                </p>
+                <p>
+                    To support real-world deployment variability, the project explored a tiered networking model that accounts for differences in internet reliability, power availability, and local computing resources. Rather than assuming a single infrastructure, the system was designed to scale across multiple environments:
                 </p>
                 <div class="tier-list">
-                    <p><strong>Tier 1: High-Reliability Deployment</strong><br>ESP32 sensor node with Raspberry Pi uplink and support for a full dashboard.</p>
-                    <p><strong>Tier 2: Moderate-Reliability Deployment</strong><br>ESP32 sensor node with lighter networking requirements.</p>
-                    <p><strong>Tier 3: Minimal-Reliability Deployment</strong><br>ESP32 sensor node with local display support and reduced internet dependence.</p>
+                    <p>Tier 1: High-Reliability Deployment<br>ESP32 sensor node with a Raspberry Pi acting as a local gateway and uplink. This configuration supports continuous cloud communication, full dashboard functionality, and centralized data aggregation.</p>
+                    <p>Tier 2: Moderate-Reliability Deployment<br>ESP32 sensor node with reduced networking requirements and intermittent cloud communication. The system prioritizes efficient data transmission and maintains core monitoring capabilities without relying on constant connectivity.</p>
+                    <p>Tier 3: Minimal-Reliability Deployment<br>ESP32 sensor node with local display and minimal internet dependence. This configuration focuses on essential readings and basic alerts, allowing operation in environments with limited infrastructure.</p>
                 </div>
                 <p>
-                    <a href="https://github.com/camrenkhoury/cedcWQSPdashboard" target="_blank" rel="noopener noreferrer">View the Dashboard GitHub Repository</a>
+                    This tiered approach ensures the system can adapt to the needs of different communities rather than relying on a single fixed deployment model. It also reflects a broader design goal of balancing data fidelity, system complexity, and reliability based on available resources.
                 </p>
+                <div class="project-links">
+                    <a class="poster-button" href="../docs/wqsp-data-visualization-poster.pdf" target="_blank" rel="noopener noreferrer">Open Data Visualization Poster PDF</a>
+                    <a href="https://github.com/camrenkhoury/cedcWQSPdashboard" target="_blank" rel="noopener noreferrer">View the Dashboard GitHub Repository</a>
+                </div>
             </div>
             <div class="project-desc-img-group media-stack section-media">
                 <figure class="media-card">
@@ -480,9 +484,8 @@
                     <figcaption class="photo-caption">Multi-tier networking concept.</figcaption>
                 </figure>
                 <figure class="media-card">
-                    <img class="poster-img" src="../images/wqsp-data-visualization-poster.jpg" alt="WQSP data visualization poster">
+                    <img class="section-poster-img" src="../images/wqsp-data-visualization-poster.jpg" alt="WQSP data visualization poster">
                     <figcaption class="photo-caption">Data Visualization poster.</figcaption>
-                    <a class="poster-button" href="../docs/wqsp-data-visualization-poster.pdf" target="_blank" rel="noopener noreferrer">Open Poster PDF</a>
                 </figure>
             </div>
         </div>
