@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PoolShark Project – Camren Khoury</title>
-    <link rel="stylesheet" href="../css/style.css?v=6">
+    <title>PoolShark Project - Camren Khoury</title>
+    <link rel="stylesheet" href="../css/style.css?v=18">
 </head>
 
 <body>
@@ -27,19 +27,17 @@
 
 <section class="section-wrapper project-page">
 
-    
-    
-    <h1 class="section-title">PoolShark – Automated Pool Vision & Control System</h1>
+    <h1 class="section-title">PoolShark - Automated Pool Vision &amp; Control System</h1>
 
     <p>
-        The PoolShark project was completed by Team 16 of ECE 4950 (Integrated Design I) in Fall 2025 at Clemson University. 
-        I worked on this team alongside 
-        <strong><a href="https://www.linkedin.com/in/john-walker-bolding/" target="_blank">John Walker Bolding</a></strong>, 
-        <strong><a href="https://www.linkedin.com/in/david-bootle/" target="_blank">David Bootle</a></strong>, 
-        <strong><a href="https://www.linkedin.com/in/william-mcglone-98617b265/" target="_blank">William McGlone</a></strong>, 
-        and 
-        <strong><a href="https://www.linkedin.com/in/blake-morgan-001b182a2/" target="_blank">Blake Morgan</a></strong>. 
-        Our team was tasked with designing an automated mini–billiards system capable of detecting ball positions and striking a ball from one end of the table into a selected pocket on the opposite side.
+        The PoolShark project was completed by Team 16 of ECE 4950 (Integrated Design I) in Fall 2025 at Clemson University.
+        I worked on this team alongside
+        <strong><a href="https://www.linkedin.com/in/john-walker-bolding/" target="_blank">John Walker Bolding</a></strong>,
+        <strong><a href="https://www.linkedin.com/in/david-bootle/" target="_blank">David Bootle</a></strong>,
+        <strong><a href="https://www.linkedin.com/in/william-mcglone-98617b265/" target="_blank">William McGlone</a></strong>,
+        and
+        <strong><a href="https://www.linkedin.com/in/blake-morgan-001b182a2/" target="_blank">Blake Morgan</a></strong>.
+        Our team was tasked with designing an automated mini-billiards system capable of detecting ball positions and striking a ball from one end of the table into a selected pocket on the opposite side.
     </p>
 
     <p>
@@ -58,91 +56,90 @@
         </a>
     </p>
 
-	
-	<h3 class="section-title">Components & Software Used</h3>
-	<div class="project-desc-section project-desc-left">
-		<div style="display: flex; flex-direction: column; gap: 12px;">
+    <h3 class="section-title">Components &amp; Software Used</h3>
+    <div class="poolshark-components-layout">
+        <div class="poolshark-components-text" style="display: flex; flex-direction: column; gap: 12px;">
 
-			<div>
-				<strong>Software:</strong><br>
-				MATLAB scripts, Simulink models (DC motor, servo, solenoid), MATLAB App Designer
-			</div>
+            <div>
+                <strong>Software:</strong><br>
+                MATLAB scripts, Simulink models (DC motor, servo, solenoid), MATLAB App Designer
+            </div>
 
-			<div>
-				<strong>Electronics:</strong><br>
-				Arduino Mega 2560, DC motor, motor driver, servo motor, solenoid
-			</div>
+            <div>
+                <strong>Electronics:</strong><br>
+                Arduino Mega 2560, DC motor, motor driver, servo motor, solenoid
+            </div>
 
-			<div>
-				<strong>Mechanical:</strong><br>
-				Gantry system, belt-drive system, 3D-printed camera mount, 3D-printed solenoid mount, 3D-printed pointer arm
-			</div>
+            <div>
+                <strong>Mechanical:</strong><br>
+                Gantry system, belt-drive system, 3D-printed camera mount, 3D-printed solenoid mount, 3D-printed pointer arm
+            </div>
 
-			<div>
-				<strong>Sensing & Vision:</strong><br>
-				Logitech Brio 100 webcam
-			</div>
+            <div>
+                <strong>Sensing &amp; Vision:</strong><br>
+                Logitech Brio 100 webcam
+            </div>
 
-			<div>
-				<strong>Test Environment:</strong><br>
-				Mini billiards table, billiard ball set
-			</div>
+            <div>
+                <strong>Test Environment:</strong><br>
+                Mini billiards table, billiard ball set
+            </div>
 
-		</div>
+        </div>
 
+        <div class="poolshark-components-media">
+            <img src="../images/shark_padded.png" alt="shark logo">
+        </div>
+    </div>
 
-		<div class="project-desc-img">
-			<img src="../images/shark_padded.png" alt="shark logo">
-		</div>
-		<hr class="white-divider">
-	</div>
+    <hr class="white-divider">
 
     <!-- =============================
-         SECTION 1 — LCS & CIRCUIT DESIGN
+         SECTION 1 - LCS & CIRCUIT DESIGN
     ============================== -->
-    <h2 class="section-title">Linear Control Systems & Circuit Design</h2>
+    <h2 class="section-title">Linear Control Systems &amp; Circuit Design</h2>
 
     <!-- Motor Control -->
     <h3 class="section-title">Simulink Motor Control</h3>
     <div class="project-desc-section project-desc-left">
         <div class="project-desc-text">
-            <p>This project utilized Linear Control Systems to safely operate and execute the motor movements involved with the system. The main utilization of this was in the DC Motor Model. The DC Motor Model was 
-                controlled with a closed-feedback loop that used a PID tuning and a sum block to subtract the expected motor position from the detected motor position. The DC Motor had a hall sensor built into it, 
-                this was responsible for returning the detected position to the Simulink for further feedback loop continuation until the motor approximated to final position. 
+            <p>This project utilized Linear Control Systems to safely operate and execute the motor movements involved with the system. The main utilization of this was in the DC Motor Model. The DC Motor Model was
+                controlled with a closed-feedback loop that used a PID tuning and a sum block to subtract the expected motor position from the detected motor position. The DC Motor had a hall sensor built into it,
+                this was responsible for returning the detected position to the Simulink for further feedback loop continuation until the motor approximated to final position.
             </p>
             <br></br>
-            <p>This project also utilized Simulink for the digital writes to the servo motor and solenoid. The servo motor was pushed a PWM signal to rotate 
+            <p>This project also utilized Simulink for the digital writes to the servo motor and solenoid. The servo motor was pushed a PWM signal to rotate
                 the pointer to the desired aim angle. The solenoid control block issued a simple digital high/low command to trigger the shot mechanism.</p>
-			<br></br>
-			<p>The combination of these two control elements formed the full Simulink pipeline for the PoolShark project. The DC motor positioned the cue along the gantry X-axis, then the servo adjusted to its commanded position, and after a brief delay the solenoid fired.
-			This sequencing ensured a predictable, repeatable, and safe motion, allowing the system to translate X position in millimeters and desired angle into physical actions</p>
-			
-			<p><strong>Primary Contributors:</strong> <strong><a href="https://www.linkedin.com/in/camren-khoury-404655226/" target="_blank">Camren Khoury</a></strong>, <strong><a href="https://www.linkedin.com/in/john-walker-bolding/" target="_blank">John Walker Bolding</a></strong></p>
-		</div>
+            <br></br>
+            <p>The combination of these two control elements formed the full Simulink pipeline for the PoolShark project. The DC motor positioned the cue along the gantry X-axis, then the servo adjusted to its commanded position, and after a brief delay the solenoid fired.
+            This sequencing ensured a predictable, repeatable, and safe motion, allowing the system to translate X position in millimeters and desired angle into physical actions</p>
 
-		<div class="project-desc-img-group">
-			<div class="project-desc-img">
-				<img src="../images/dcmotorcontrolblock.png" alt="DC Motor Control Block">
-				<p class="photo-caption">DC Motor Control Block</p>
-			</div>
-			<div class="project-desc-img">
-				<img src="../images/PoolSharkMotorModel.png" alt="Connected Simulink Block">
-				<p class="photo-caption">DC Motor, Servo, and Solenoid Subsystems</p>
-			</div>
-		</div>
-	</div>
+            <p><strong>Primary Contributors:</strong> <strong><a href="https://www.linkedin.com/in/camren-khoury-404655226/" target="_blank">Camren Khoury</a></strong>, <strong><a href="https://www.linkedin.com/in/john-walker-bolding/" target="_blank">John Walker Bolding</a></strong></p>
+        </div>
+
+        <div class="project-desc-img-group">
+            <div class="project-desc-img">
+                <img src="../images/dcmotorcontrolblock.png" alt="DC Motor Control Block">
+                <p class="photo-caption">DC Motor Control Block</p>
+            </div>
+            <div class="project-desc-img">
+                <img src="../images/PoolSharkMotorModel.png" alt="Connected Simulink Block">
+                <p class="photo-caption">DC Motor, Servo, and Solenoid Subsystems</p>
+            </div>
+        </div>
+    </div>
 
     <!-- Circuit Design -->
     <h3 class="section-title">Circuit Design</h3>
     <div class="project-desc-section project-desc-right">
         <div class="project-desc-text">
-            <p>The circuit diagram to the left shows how the DC motor, solenoid, and servo interface with the Arduino Mega 2560 microcontroller provided with the lab through 
+            <p>The circuit diagram to the left shows how the DC motor, solenoid, and servo interface with the Arduino Mega 2560 microcontroller provided with the lab through
                 dedicated power and switching components. Each subsystem uses different hardware requirements, and the circuit is broken into three functional blocks similar
                 to the associated Simulink model blocks above.
             </p>
 
             <p>
-                The DC motor subsystem uses a motor driver to safely interface the motor with the Arduino, due to differences in voltage and current requirements between the two. 
+                The DC motor subsystem uses a motor driver to safely interface the motor with the Arduino, due to differences in voltage and current requirements between the two.
                 The DC motor is connected to a 12V DC Power supply since the microcontroller can not supply a voltage over 5V safely. The arduino provides PWM and directional signals to the motor driver,
                 allowing control of both motor speed and rotational direction. The servo subsystem uses a standard PWM control signal from the Arduino digital write to set its rotational angle. It receives its own
                 5V and ground lines and the internal electronics will interpret the PWM commands and self-adjust the position until the servo essentially fights to the desired position.
@@ -150,22 +147,22 @@
                 the MOSFET gate through the 47 ohm resistor, which slightly removes overcurrent and reduces noise. The 10k ohm resistor is placed on the MOSFET gate to ensure the
                 solenoid remains off during startup or if the control pin is undecided and currently neither driving 1 or 0.
             </p>
-			
-			<p><strong>Primary Contributor:</strong> <strong><a href="https://www.linkedin.com/in/blake-morgan-001b182a2/" target="_blank">Blake Morgan</a></strong><p>
+
+            <p><strong>Primary Contributor:</strong> <strong><a href="https://www.linkedin.com/in/blake-morgan-001b182a2/" target="_blank">Blake Morgan</a></strong></p>
         </div>
-            <div class="project-desc-img">
+        <div class="project-desc-img">
             <img src="../images/PoolSharkCircuitDiagram.png" alt="Pool Shark Circuit Diagram">
             <p class="photo-caption">Pool Shark Circuit Diagram</p>
         </div>
     </div>
 
-	<hr class="white-divider">
-	
+    <hr class="white-divider">
+
     <!-- =============================
-         SECTION 2 — VISION SYSTEM
+         SECTION 2 - VISION SYSTEM
     ============================== -->
     <h2 class="section-title">Vision System</h2>
-    
+
     <!-- Vision Overview -->
     <h3 class="section-title">Vision System Overview</h3>
     <div class="project-desc-section project-desc-left">
@@ -181,34 +178,34 @@
     <div class="project-desc-section project-desc-left">
 
         <div class="project-desc-text">
-            <p>The homography transformation converts the angled webcam image into a proportionate bird's-eye view, top-down representation of the pool table. 
+            <p>The homography transformation converts the angled webcam image into a proportionate bird's-eye view, top-down representation of the pool table.
                 The camera is mounted off to the side in the initial gantry design, which became a limitation when it came to computer vision, thus homography
                 was implemented to give a better view of the table and to account for perspective distortion. From the initial perspective objects that are located
                 further from the camera, appear smaller and have less pixels associated per mm in real life, and the table edges are skewed. The homography corrects this by
                 mapping the four corners of the real table to a rectangular coordinate system during an early calibration step.
             </p>
-			
+
             <p>
                 The software defines a target rectangle whose dimensions match the actual table size and resolution desired for processing. The MATLAB code computes a projective transform matrix with <strong>fitgeotrans</strong>, which mathematically describes how every point
                 in the original image maps to the now uniform top-down view.
             </p>
-                Once the frame is calculated, the frame is remapped using the MATLAB <strong>iwarp</strong> function. This step reconstructs a new image where straight lines 
-                remain straight and distances are consistent across the table. The resulting image becomes the new frame for calculations for color detection, morphology, and centroid 
+                Once the frame is calculated, the frame is remapped using the MATLAB <strong>iwarp</strong> function. This step reconstructs a new image where straight lines
+                remain straight and distances are consistent across the table. The resulting image becomes the new frame for calculations for color detection, morphology, and centroid
                 placement allowing for accurate angle calculations and distance placement.
             <p>
 
             </p>
-			<p><strong>Primary Contributors:</strong> <strong><a href="https://www.linkedin.com/in/william-mcglone-98617b265/" target="_blank">William McGlone</a></strong>, <strong><a href="https://www.linkedin.com/in/camren-khoury-404655226/" target="_blank">Camren Khoury</a></strong></p>
+            <p><strong>Primary Contributors:</strong> <strong><a href="https://www.linkedin.com/in/william-mcglone-98617b265/" target="_blank">William McGlone</a></strong>, <strong><a href="https://www.linkedin.com/in/camren-khoury-404655226/" target="_blank">Camren Khoury</a></strong></p>
         </div>
 
         <div class="project-desc-img-group">
             <div class="project-desc-img">
-                <img src="../images/prehomography.jpg">
+                <img src="../images/prehomography.jpg" alt="Pre homography example">
                 <p class="photo-caption">Pre Homography Example</p>
             </div>
 
             <div class="project-desc-img">
-                <img src="../images/posthomography.png">
+                <img src="../images/posthomography.png" alt="Post homography example">
                 <p class="photo-caption">Post Homography Example</p>
             </div>
         </div>
@@ -216,7 +213,7 @@
     </div>
 
     <!-- Image & Color Detection -->
-    <h3 class="section-title">Image & Color Detection</h3>
+    <h3 class="section-title">Image &amp; Color Detection</h3>
 
     <div class="project-desc-section project-desc-left">
 
@@ -238,87 +235,86 @@
 
         <div class="project-desc-text">
         <p>
-            The image detection system analyzes the post-homography camera frame to identify each billiard ball on the table. 
-            Homography correction ensures a consistent top-down coordinate frame, which provides a reliable basis for color detection 
-            and centroid extraction. The system then processes this corrected frame through several stages that identify ball colors, 
-            refine shapes, and verify geometric consistency. The overall goal is to produce a clean and accurate set of ball positions 
+            The image detection system analyzes the post-homography camera frame to identify each billiard ball on the table.
+            Homography correction ensures a consistent top-down coordinate frame, which provides a reliable basis for color detection
+            and centroid extraction. The system then processes this corrected frame through several stages that identify ball colors,
+            refine shapes, and verify geometric consistency. The overall goal is to produce a clean and accurate set of ball positions
             that can be passed to later components such as shot-geometry calculations and motor control.
         </p>
 
         <p>
-            Color identification is performed in the HSV color space, which offers more stable segmentation under varying lighting 
-            compared to traditional RGB thresholding. Each ball color has a defined hue, saturation, and value range that is used to 
-            generate a raw mask for that specific color. The system cycles through every color class and extracts candidate regions that 
-            match the expected HSV profile. This is helpful when objects in the frame may share similar shades but differ in saturation 
-            or brightness. After initial thresholding, geometric checks such as size, aspect ratio, and boundary location are applied to 
-            reject false positives. This stage produces filtered color masks that isolate the most likely regions corresponding to actual 
+            Color identification is performed in the HSV color space, which offers more stable segmentation under varying lighting
+            compared to traditional RGB thresholding. Each ball color has a defined hue, saturation, and value range that is used to
+            generate a raw mask for that specific color. The system cycles through every color class and extracts candidate regions that
+            match the expected HSV profile. This is helpful when objects in the frame may share similar shades but differ in saturation
+            or brightness. After initial thresholding, geometric checks such as size, aspect ratio, and boundary location are applied to
+            reject false positives. This stage produces filtered color masks that isolate the most likely regions corresponding to actual
             billiard balls.
         </p>
 
         <p>
-            After generating the color masks, the system applies morphological filtering to remove noise and reconstruct cleaner ball 
-            shapes. Morphology eliminates speckles, fills small gaps, and helps distinguish between objects that share a similar color but 
-            do not match the expected size or shape of a billiard ball. Circular reconstruction is then used to rebuild each ball into a 
-            more uniform circular region. This helps maintain consistent centroid placement even when the real ball contains white number 
-            patches that break the color mask or when lighting distorts the ball edge. The final output is a structured list of detected 
+            After generating the color masks, the system applies morphological filtering to remove noise and reconstruct cleaner ball
+            shapes. Morphology eliminates speckles, fills small gaps, and helps distinguish between objects that share a similar color but
+            do not match the expected size or shape of a billiard ball. Circular reconstruction is then used to rebuild each ball into a
+            more uniform circular region. This helps maintain consistent centroid placement even when the real ball contains white number
+            patches that break the color mask or when lighting distorts the ball edge. The final output is a structured list of detected
             balls that includes color, centroid, area, and other properties required for accurate shot-geometry computation.
         </p>
 
-			<p><strong>Primary Contributor:</strong> <strong><a href="https://www.linkedin.com/in/camren-khoury-404655226/" target="_blank">Camren Khoury</a></strong><p>
+            <p><strong>Primary Contributor:</strong> <strong><a href="https://www.linkedin.com/in/camren-khoury-404655226/" target="_blank">Camren Khoury</a></strong></p>
         </div>
-		
 
     </div>
 
-	<hr class="white-divider">
+    <hr class="white-divider">
 
     <!-- =============================
-         SECTION 3 — USER INTERFACE
+         SECTION 3 - USER INTERFACE
     ============================== -->
     <h2 class="section-title">User Interface</h2>
     <div class="project-desc-section project-desc-left">
 
         <div class="project-desc-text">
             <p>
-            The project uses a two-part user interface design to allow for a visually pleasing user entrance design, but also a basic, sleek, high-performance control page during machine operation. 
-            When the program is initially run, the PoolShark entrance page opens. This page displays custom graphics such as a Clemson paw pool table, a cartoon shark, and video game–like loading graphics. 
-            This page was primarily created using MATLAB’s App Designer, but was also conditionally modified in the MATLAB code.
+            The project uses a two-part user interface design to allow for a visually pleasing user entrance design, but also a basic, sleek, high-performance control page during machine operation.
+            When the program is initially run, the PoolShark entrance page opens. This page displays custom graphics such as a Clemson paw pool table, a cartoon shark, and video game-like loading graphics.
+            This page was primarily created using MATLAB's App Designer, but was also conditionally modified in the MATLAB code.
             </p>
 
             <p>
-            Once the user clicks the “Play Game” button, the calibration stage starts to gather user-input corners of the pool table to later be used to compute the homography of the image. 
+            Once the user clicks the "Play Game" button, the calibration stage starts to gather user-input corners of the pool table to later be used to compute the homography of the image.
             This calibration step then leads to the PoolShark control page, which shows the most recent active frame and gives the user input options for which ball to hit and which pocket to hit it into.
             From this point on, the system is fully automated, only requiring user input when there is a change in the desired ball or pocket.
             </p>
 
             <p>
-            Future plans for this design element include replacing the drop-down menus with cartoon billiard balls and cartoon pockets that the user could click to choose their desired shot. 
+            Future plans for this design element include replacing the drop-down menus with cartoon billiard balls and cartoon pockets that the user could click to choose their desired shot.
             Another potential design improvement would be to actively display the centroid values to the user in the camera feed that is currently being displayed.
             </p>
 
-			<p><strong>Primary Contributor:</strong><strong> <a href="https://www.linkedin.com/in/camren-khoury-404655226/" target="_blank">Camren Khoury</a></strong></p>
+            <p><strong>Primary Contributor:</strong><strong> <a href="https://www.linkedin.com/in/camren-khoury-404655226/" target="_blank">Camren Khoury</a></strong></p>
         </div>
 
         <div class="project-desc-img-group">
             <div class="project-desc-img">
-                <img src="../images/PoolSharkEntrancePage.png">
-                <p class="photo-caption"> Pool Shark Entrance Page</p>
+                <img src="../images/PoolSharkEntrancePage.png" alt="Pool Shark Entrance Page">
+                <p class="photo-caption">Pool Shark Entrance Page</p>
             </div>
 
             <div class="project-desc-img">
-                <img src="../images/PoolSharkControlPage.png">
+                <img src="../images/PoolSharkControlPage.png" alt="Pool Shark Control Page">
                 <p class="photo-caption">Pool Shark Control Page</p>
             </div>
         </div>
 
     </div>
 
-	<hr class="white-divider">
+    <hr class="white-divider">
 
     <!-- =============================
-         SECTION 4 — MECHANICAL DESIGN and Calculations
+         SECTION 4 - MECHANICAL DESIGN and Calculations
     ============================== -->
-    <h2 class="section-title">Mechanical Design & Geometry</h2>
+    <h2 class="section-title">Mechanical Design &amp; Geometry</h2>
 
     <!-- Mechanical Design -->
     <h3 class="section-title">Mechanical Design</h3>
@@ -336,59 +332,58 @@
             The firing assembly integrates a servo motor for angular aiming and a solenoid for delivering the impulse required to strike the cue ball. These components are housed in custom 3D-printed mounts that prioritize rigidity and compactness to reduce mechanical play. By rigidly coupling the servo and solenoid to the gantry system, the mechanical design ensures consistent shot alignment and repeatable firing behavior during automated operation.
             </p>
 
-			<p><strong>Primary Contributors:</strong> <strong><a href="https://www.linkedin.com/in/david-bootle/" target="_blank">David Bootle</a></strong>, <strong><a href="https://www.linkedin.com/in/william-mcglone-98617b265/" target="_blank">William McGlone</a></strong>, <strong><a href="https://www.linkedin.com/in/john-walker-bolding/" target="_blank">John Walker Bolding</a></strong></strong></p>
+            <p><strong>Primary Contributors:</strong> <strong><a href="https://www.linkedin.com/in/david-bootle/" target="_blank">David Bootle</a></strong>, <strong><a href="https://www.linkedin.com/in/william-mcglone-98617b265/" target="_blank">William McGlone</a></strong>, <strong><a href="https://www.linkedin.com/in/john-walker-bolding/" target="_blank">John Walker Bolding</a></strong></p>
         </div>
         <div class="project-desc-img-group">
             <div class="project-desc-img">
-                <img src="../images/gantry_cad.png">
+                <img src="../images/gantry_cad.png" alt="Gantry CAD Model">
                 <p class="photo-caption">Gantry CAD Model</p>
             </div>
 
             <div class="project-desc-img">
-                <img src="../images/beltwithsolenoid.jpg">
+                <img src="../images/beltwithsolenoid.jpg" alt="Final gantry with belt-driven motion">
                 <p class="photo-caption">Final gantry with belt-driven motion</p>
             </div>
         </div>
     </div>
 
-    
     <!-- Shot Geometry -->
     <h3 class="section-title">Shot Geometry</h3>
     <div class="project-desc-section project-desc-left">
         <div class="project-desc-text">
         <p>
-            The shot-geometry module computes the final two values needed for the Simulink Motor Model to initiate movement. 
-            These two values are the rotation angle of the servo motor pointing the cue and the X-position the cue needs to be at on the table via the gantry carriage. 
-            These values are calculated directly from the top-down coordinate frame produced by the homography transformation. 
-            The function first identifies the cue ball and the selected target ball from the image detection structure that is passed from the detectBallsHSV.m pipeline. 
+            The shot-geometry module computes the final two values needed for the Simulink Motor Model to initiate movement.
+            These two values are the rotation angle of the servo motor pointing the cue and the X-position the cue needs to be at on the table via the gantry carriage.
+            These values are calculated directly from the top-down coordinate frame produced by the homography transformation.
+            The function first identifies the cue ball and the selected target ball from the image detection structure that is passed from the detectBallsHSV.m pipeline.
             If either ball is not available, the computation defaults to just potting the cue ball.
         </p>
 
         <p>
-            Pocket selection determines the desired travel direction of the target ball, which in this project is always away from the gantry. 
-            Each pocket is represented by fixed pixel-coordinate locations on the warped table image. 
-            Once the pocket location is known, the geometry between the target ball and pocket is used to compute the "ghost ball" location, 
-            which is the point where the cue ball must make contact to send the target into the selected pocket. 
+            Pocket selection determines the desired travel direction of the target ball, which in this project is always away from the gantry.
+            Each pocket is represented by fixed pixel-coordinate locations on the warped table image.
+            Once the pocket location is known, the geometry between the target ball and pocket is used to compute the "ghost ball" location,
+            which is the point where the cue ball must make contact to send the target into the selected pocket.
             The ghost ball is offset from the target ball by the estimated cue radius, which is calculated from the ball's bounding box.
         </p>
 
-        <p> After the ghost ball location is identified, the function computes the vector from the cue ball to the ghost point and converts 
-            it into a servo rotation angle within the 0 to 180 degree range required by the pointer assembly. The X-axis carriage placement is 
-            then determined by mapping the ghost ball coordinates from pixel space into real world millimeters based on the calibrated table 
-            height and the usable travel distance of the DC motor driven gantry. The function finally passes the calculated servo angle, X-position, and 
+        <p> After the ghost ball location is identified, the function computes the vector from the cue ball to the ghost point and converts
+            it into a servo rotation angle within the 0 to 180 degree range required by the pointer assembly. The X-axis carriage placement is
+            then determined by mapping the ghost ball coordinates from pixel space into real world millimeters based on the calibrated table
+            height and the usable travel distance of the DC motor driven gantry. The function finally passes the calculated servo angle, X-position, and
             a constant maximum solenoid power to the poolSharkExecuteShot MATLAB file which is responsible for communicating with the Simulink Motor Model.
 
         </p>
-			<p><strong>Primary Contributor:</strong> <strong><a href="https://www.linkedin.com/in/john-walker-bolding/" target="_blank">John Walker Bolding</a></strong></p>
+            <p><strong>Primary Contributor:</strong> <strong><a href="https://www.linkedin.com/in/john-walker-bolding/" target="_blank">John Walker Bolding</a></strong></p>
         </div>
         <div class="project-desc-img">
-            <img src="../images/geometrysketch.png">
+            <img src="../images/geometrysketch.png" alt="Shot Geometry Sketch">
             <p class="photo-caption">Shot Geometry Sketch</p>
         </div>
     </div>
 
-	<hr class="white-divider">
-	
+    <hr class="white-divider">
+
     <!-- Final Pipeline -->
     <h2 class="section-title">Full Automation Pipeline</h2>
 
@@ -407,9 +402,8 @@
 
 </section>
 
-
 <footer class="site-footer">
-    <p>© 2026 Camren Khoury</p>
+    <p>&copy; 2026 Camren Khoury</p>
 </footer>
 
 </body>
