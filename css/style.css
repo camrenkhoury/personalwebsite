@@ -1488,6 +1488,19 @@ strong {
     max-height: 400px;
 }
 
+.data-viz-standard-img {
+    aspect-ratio: 3199 / 1999;
+    object-fit: cover;
+}
+
+.data-viz-team-img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+}
+
 .lifecycle-diagram {
     max-height: 420px;
 }
@@ -1506,6 +1519,10 @@ strong {
     object-fit: contain;
     display: block;
     margin: 0 auto;
+}
+
+.sensor-dev-media {
+    transform: translateY(-1.4rem);
 }
 
 .media-card .poster-img,
@@ -1587,6 +1604,10 @@ strong {
     max-height: 520px;
 }
 
+.data-viz-media .media-card {
+    width: 94%;
+}
+
 .tier-list {
     display: grid;
     gap: 1rem;
@@ -1595,6 +1616,10 @@ strong {
 
 .tier-list p {
     margin: 0;
+}
+
+.tier-list--spaced {
+    margin-bottom: 1.3rem;
 }
 
 .poster-button {
