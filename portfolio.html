@@ -109,11 +109,7 @@
                     </div>
                 </article>
 
-                <div class="project-subsection-heading">
-                    <h2 class="section-title">Small Projects</h2>
-                </div>
-
-                <article class="project-entry">
+                <article class="project-entry project-entry--reverse">
                     <div class="project-entry__media">
                         <img src="images/picluster4.png" alt="Raspberry Pi cluster" loading="lazy">
                     </div>
@@ -135,6 +131,10 @@
                     </div>
                 </article>
 
+                <div class="project-subsection-heading">
+                    <h2 class="section-title">Small Projects</h2>
+                </div>
+
                 <article class="project-entry project-entry--reverse">
                     <div class="project-entry__media">
                         <img src="images/pynq-z2.png" alt="Pynq-Z2 FPGA board" loading="lazy">
@@ -144,14 +144,10 @@
                             <h2>FPGA and Digital Systems</h2>
                             <span class="project-status">Completed</span>
                         </div>
-                        <p>Digital design work using programmable logic, Verilog modules, testbenches, and FPGA development tools.</p>
+                        <p>Digital design coursework focused on FPGA development, Verilog-based hardware design, simulation, and hardware validation using programmable logic systems.</p>
                         <div class="project-details">
-                            <div><strong>My work:</strong> Verilog modules, ALU and processor work, testbenches, and board-level FPGA exercises.</div>
-                            <div><strong>Hardware / software:</strong> Pynq-Z2, Verilog, Vivado, and Vitis.</div>
-                            <div><strong>Status:</strong> page still being expanded.</div>
-                        </div>
-                        <div class="project-links">
-                            <span class="button button--secondary button--disabled" aria-disabled="true">Documentation Coming Soon</span>
+                            <div><strong>My work:</strong> implemented combinational and sequential Verilog modules, multiplexers, latches, flip-flops, counters, ALU-style logic, state machines, Booth/bit-pair recoded multipliers, and modular processor-style datapaths. Developed behavioral, gate-level, and dataflow models alongside simulation testbenches for validating timing behavior, edge cases, clocked logic, and sequential state transitions. Completed board-level FPGA exercises involving hardware I/O mapping, timing constraints, debugging, and synthesis validation.</div>
+                            <div><strong>Hardware / software:</strong> Pynq-Z2 FPGA board, Verilog HDL, Vivado, Vitis, XDC constraints, waveform simulation, behavioral simulation, synthesis/implementation flows, finite state machines, pipelining concepts, hardware timing analysis, and FPGA hardware debugging.</div>
                         </div>
                     </div>
                 </article>
@@ -165,14 +161,10 @@
                             <h2>PLC Automation (ICS/DCS/HMI)</h2>
                             <span class="project-status">Completed</span>
                         </div>
-                        <p>Industrial control work centered on PLC logic, HMI structure, and automation-focused lab systems.</p>
+                        <p>Industrial control simulation work focused on PLC sequencing, elevator state handling, operator inputs, indicators, and emergency recovery behavior.</p>
                         <div class="project-details">
-                            <div><strong>My work:</strong> control logic, sequencing, and operator interaction flow.</div>
-                            <div><strong>Hardware / software:</strong> PLC programming and HMI structure.</div>
-                            <div><strong>Status:</strong> writeup still in progress.</div>
-                        </div>
-                        <div class="project-links">
-                            <span class="button button--secondary button--disabled" aria-disabled="true">Documentation Coming Soon</span>
+                            <div><strong>My work:</strong> used Omron Sysmac Studio to develop a three-floor single-direction queue elevator simulation system. The control logic prioritized floor requests in the order buttons were pressed while maintaining directional sequencing and waiting logic between floors.</div>
+                            <div><strong>Hardware / software:</strong> Omron Sysmac Studio PLC programming, physical button inputs, illuminated button indicators, and floor LEDs used to represent elevator state and motion. The system included an emergency-stop fire-condition simulation where pressing emergency stop halted operation immediately, and pressing the green recovery/reset button resumed from the exact saved state and floor position instead of restarting the sequence.</div>
                         </div>
                     </div>
                 </article>
@@ -186,14 +178,10 @@
                             <h2>Data Structures and Algorithms</h2>
                             <span class="project-status">Completed</span>
                         </div>
-                        <p>Coursework and implementation work centered on memory-managed data structures, algorithms, and debugging.</p>
+                        <p>Programming coursework in C focused on implementing core data structures, debugging memory-managed code, and validating behavior through structured tests.</p>
                         <div class="project-details">
-                            <div><strong>My work:</strong> linked structures, trees, stacks, queues, and algorithm-heavy coding assignments.</div>
-                            <div><strong>Hardware / software:</strong> low-level programming, memory management, algorithm analysis, and debugging.</div>
-                            <div><strong>Status:</strong> page content still being expanded.</div>
-                        </div>
-                        <div class="project-links">
-                            <span class="button button--secondary button--disabled" aria-disabled="true">Documentation Coming Soon</span>
+                            <div><strong>My work:</strong> implemented linked lists, doubly linked lists with rover-style traversal, FIFO-style request queues, stacks, queues, hash tables, sorting routines, and recursive algorithm assignments. The work emphasized pointer management, dynamic memory allocation, insertion/removal logic, edge-case handling, and correctness under test inputs.</div>
+                            <div><strong>Hardware / software:</strong> C, Ubuntu/Linux, GitHub Classroom, Makefiles, shell scripts, GDB, Valgrind, memory-leak checking, test scripts, and command-line debugging. Assignments included service-request queue simulations, sorted task lists, hash-table based lookup problems such as Two Sum, and debugging linked-list behavior under different input sequences.</div>
                         </div>
                     </div>
                 </article>
