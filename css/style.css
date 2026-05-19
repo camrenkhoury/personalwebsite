@@ -1225,7 +1225,7 @@ strong {
 }
 
 .about-photo-card--delilah img {
-    height: clamp(260px, 34vw, 380px);
+    height: clamp(305px, 40vw, 455px);
 }
 
 .involvement-grid {
