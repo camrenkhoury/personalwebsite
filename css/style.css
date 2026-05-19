@@ -1224,6 +1224,10 @@ strong {
     border-radius: 4px;
 }
 
+.about-photo-card--delilah img {
+    height: clamp(260px, 34vw, 380px);
+}
+
 .involvement-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
